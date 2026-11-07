@@ -1,0 +1,38 @@
+.objetivos {
+    background: #FAF9F6;
+    padding: 45px 55px;
+}
+
+.objetivos h2 {
+    color: #031312;
+    margin-bottom: 90px;
+}
+
+.objetivosLista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.objetivosLista li {
+    background: #000D0C;
+    border-radius: 10px;
+    padding: 15px 30px;
+    flex: 1 1 300px;
+    border: 2px solid #C75BCA;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.objetivosLista li h3 {
+    color: #FAF9F6;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.objetivosLista li p {
+    color: #797979;
+    margin-top: 10px;
+}
