@@ -254,4 +254,70 @@ header {
   text-shadow: var(--verde) 0px 0px 5px;
 }
   
+/* main ===============================================================================*/
+main {
+  background-color: #fff;
+}
 
+/* seção de apresentação ============================================================= */
+main #presentation {
+  background-image: url(../assets/images/section1.png);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  height: 600px;
+  position: relative;
+}
+
+main #presentation::before,
+main #presentation::after {
+  content: "";
+  background: url(../assets/images/imgDetalhe.png);
+  background-size: contain;
+  display: block;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+}
+main #presentation::before{
+  top: 45px;
+  right: 0;
+}
+
+main #presentation::after {
+  bottom: 0;
+  left: 0;
+}
+main #presentation h2 {
+  font-family: "Cormorant Garamond", sans-serif;
+  font-weight: bold;
+  font-size: 55px;
+  width: 45%;
+  margin-top: 60px;
+}
+main #presentation p {
+  color: #555E5E;
+  font-size: 24px;
+  width: 50%;
+}
+main #presentation .link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: fit-content;
+  border-radius: 10px;
+  background-color: var(--verde);
+  color: var(--verde-claro);
+  padding: 15px 30px;
+  cursor: pointer;
+
+}
+main #presentation .link svg{
+  width: 20px;
+}
