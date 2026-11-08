@@ -1,0 +1,44 @@
+.footer {
+    background: #000D0C;
+    padding: 45px 55px;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.logoFooter {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+
+.logoFooter img {
+    width: 180px;
+    cursor: pointer;
+}
+
+.logoFooter p {
+    color: #FAF9F6;
+    letter-spacing: 1px;
+}
+
+.footer h5 {
+    color: #FAF9F6;
+    font-size: 19px;
+}
+
+.sobreFooter ul, .contatoFooter ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.footer ul a {
+    color: #FAF9F6;
+}

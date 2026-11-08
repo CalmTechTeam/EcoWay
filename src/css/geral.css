@@ -8,6 +8,10 @@ ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 .tituloSecundario {
     font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
     font-size: 45px;
