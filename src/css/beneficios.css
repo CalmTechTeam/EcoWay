@@ -1,0 +1,110 @@
+.beneficios {
+    padding: 45px 55px;
+    background: #031312;
+}
+
+.beneficios h2 {
+    color: #FDFCF8;
+}
+
+.beneficios h2::before {
+    border-color: #FDFCF8;
+}
+
+.beneficios h2::after {
+    border-color: #FDFCF8;
+}
+
+.beneficiosContainer h4 {
+    text-transform: uppercase;
+    color: #FAF9F6;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.beneficiosContainer {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 45px;
+    margin-top: 90px;
+}
+
+.beneficioItem {
+    width: 250px;
+    border: 2px solid #354140;
+    padding: 15px 30px;
+    border-radius: 5px;
+    color: #dfdedd;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.beneficioItem div {
+    border: 2px dashed #354140;
+    padding: 10px 20px;
+    transition: all 0.4s ease;
+}
+
+.beneficioItem p {
+    position: relative;
+}
+
+.beneficioItem p::before {
+    content: "";
+    position: absolute;
+    top: -9%;
+    left: -13px;
+    width: 17px;
+    height: 4px;
+    transition: all 0.4s ease;
+}
+
+.beneficioItem p::after {
+    content: "";
+    position: absolute;
+    top: -9%;
+    right: -13px;
+    width: 17px;
+    height: 4px;
+    transition: all 0.4s ease;
+}
+
+.cidadao, .pet, .cidade {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cidadao .beneficioItem p::after, .cidadao .beneficioItem p::before {
+    background: linear-gradient(#65B236, #304C17);
+}
+
+.cidade .beneficioItem p::after, .cidade .beneficioItem p::before {
+    background: linear-gradient(#C75BCA, #7C1980);
+}
+
+.pet .beneficioItem p::after, .pet .beneficioItem p::before {
+    background: linear-gradient(#9747FF, #031312);
+}
+
+.beneficioItem:hover div, .beneficioItem:hover {
+    border-color: #FDFCF8;
+}
+
+.beneficioItem:hover p::after, .beneficioItem:hover p::before{ 
+    width: 25px;
+}
+
+@media(max-width:670px) {
+   .beneficiosContainer {
+        justify-content: center;
+    } 
+}
