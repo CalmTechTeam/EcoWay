@@ -272,6 +272,18 @@
     width: 100%;
     border-radius: 5px;
     display: none;
+    animation: imgMapa 0.4s forwards;
+}
+
+@keyframes imgMapa {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 .monitoramentoAmbiente {
