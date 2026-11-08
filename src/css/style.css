@@ -1,7 +1,12 @@
 /* Variáveis ========================================================================*/
 :root {
+  --azul-cinza: #555E5E;
+  --cinza-claro: #FAF9F6;
   --verde: #304C17;
+  --verde-brilhante: #65B236;
   --verde-claro: #CAD8C1;
+  --roxo: #9D2BA1;
+  --fonte-titulos: "Cormorant Garamond";
 }
 
 /* Reset ===========================================================================*/
@@ -189,30 +194,6 @@
   }
 }
 
-@media (max-width: 768px) {
-  #intro .introContainer {
-    gap: 130px;
-  }
-  #intro .bgBlack {
-    background-color: #000;
-  }
-
-  #intro .ladoEsquerdo .planta,
-  #intro .ladoDireito .planta {
-    height: 670px;
-  }
-
-  @keyframes intro {
-    from {
-      top: 80px;
-    }
-
-    to {
-      top: 0px;
-    }
-  }
-}
-
 
 /* header =============================================================================*/
 header {
@@ -261,7 +242,7 @@ main {
 
 /* seção de apresentação ============================================================= */
 main #presentation {
-  background-image: url(../assets/images/section1.png);
+  background-image: url(../assets/images/apresentacao/section1.png);
   background-size: 70%;
   background-repeat: no-repeat;
   background-position-x: right;
@@ -277,7 +258,7 @@ main #presentation {
 main #presentation::before,
 main #presentation::after {
   content: "";
-  background: url(../assets/images/imgDetalhe.png);
+  background: url(../assets/images/apresentacao/imgDetalhe.png);
   background-size: contain;
   display: block;
   width: 70px;
@@ -293,17 +274,21 @@ main #presentation::after {
   bottom: 0;
   left: 0;
 }
-main #presentation h2 {
+main #presentation .titulo {
+  margin-top: 60px;
+  width: 45%;
+}
+main .titulo {
   font-family: "Cormorant Garamond", sans-serif;
   font-weight: bold;
   font-size: 55px;
-  width: 45%;
-  margin-top: 60px;
 }
-main #presentation p {
-  color: #555E5E;
-  font-size: 24px;
+main #presentation .texto {
   width: 50%;
+}
+main .texto {
+  color: var(--azul-cinza);
+  font-size: 24px;
 }
 main #presentation .link {
   display: flex;
@@ -320,4 +305,122 @@ main #presentation .link {
 }
 main #presentation .link svg{
   width: 20px;
+}
+
+
+/* Desafios ==================================================================== */
+#desafios{
+  margin: 100px 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* desafio 1 */
+#desafios .desafio { 
+  position: relative;
+  opacity: 0;
+  transition: 1s ease-in-out all;
+}
+#desafio1 {
+  transform: translateX(100%);
+}
+
+#desafios .desafio.visivel {
+  transform: translateX(0);
+  opacity: 1;
+}
+.desafio::before,
+.desafiosContainer::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+}
+
+.desafio.right::before{
+  left: 50%;
+}
+.desafiosContainer.right::before {
+  left: 200px;
+  border-radius: 20px 0 0 20px;
+}
+.desafio.right::before,
+.desafiosContainer.right::before {
+  background-color: var(--verde);
+}
+
+.desafiosContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 260px;
+  padding: 40px 0;
+  position: relative;
+}
+
+
+.desafiosContainer img {
+  width: 400px;
+  position: relative;
+  z-index: 3;
+}
+.desafiosTextContent {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  z-index: 3;
+}
+.desafiosTextContent .titulo {
+  color: var(--cinza-claro);
+  font-size: 50px;
+}
+.desafiosTextContent .texto {
+  color: var(--verde-claro);
+}
+.desafiosTextContent .texto span {
+  color: var(--verde-brilhante)
+}
+.desafiosTextContent .desafiosLink {
+  display: block;
+  font-size: 24px;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  width: fit-content;
+  cursor: pointer;
+}
+.desafiosTextContent .roxo {
+  background: var(--roxo);
+}
+
+/* desafio 3 */
+#desafio3 {
+  transform: translateX(100%);
+}
+
+/* desafio 2 e 4*/
+#desafio4,
+#desafio2 {
+  transform: translateX(-100%);
+}
+.desafio.left::before{
+  right: 50%;
+}
+.desafiosContainer.left::before {
+  right: 200px;
+  border-radius: 0px 20px 20px 0px;
+}
+.desafio.left::before,
+.desafiosContainer.left::before {
+  background-color: #000;
+}
+
+.desafiosTextContent .verde {
+  background: var(--verde);
 }
