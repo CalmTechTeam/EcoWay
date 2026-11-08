@@ -109,6 +109,19 @@
     width: 1000px;
     margin: 0 auto;
     border-radius: 0 0 7px 7px;
+    display: none;
+    animation: monitoramento 0.4s forwards;
+}
+
+@keyframes monitoramento {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 @media(max-width:1088px) {
@@ -258,6 +271,7 @@
 .mapaImg img {
     width: 100%;
     border-radius: 5px;
+    display: none;
 }
 
 .monitoramentoAmbiente {
