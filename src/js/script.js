@@ -1,3 +1,4 @@
+// intro animada ==============================================================
 const intro = document.getElementById('intro');
 const introContainer = document.getElementById('introContainer');
 const plantaEsquerda = document.querySelector('.ladoEsquerdo');
@@ -26,6 +27,8 @@ intro.addEventListener('click', () => {
   introContainer.classList.remove('bgBlack');
 });
 
+
+// animação scroll lateral desafios ============================================
 const elemento = document.querySelector('#desafios');
 
 const desafio1 = document.getElementById('desafio1');
