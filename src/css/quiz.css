@@ -1,0 +1,103 @@
+.quiz {
+    background: #000D0C;
+    padding: 45px 55px;
+    position: relative;
+    width: 100%;
+    min-height: 350px;
+    padding: 45px 0 45px 55px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    min-height: 450px;
+    overflow: hidden;
+}
+
+.folhasQuiz {
+    position: absolute;
+    width: 860px;
+    height: auto;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+@media(max-width:893px) {
+  .folhasQuiz {
+        width: 700px;
+    }  
+}
+
+@media(max-width:712px) {
+  .folhasQuiz {
+        width: 650px;
+    } 
+    .textoImpacto h2 {
+        font-size: 45px;
+        max-width: 70vw !important;
+    }
+
+    .textoImpacto p {
+        font-size: 15px;
+        max-width: 60vw !important;
+    }
+}
+@media(max-width:590px) {
+  .folhasQuiz {
+        width: 550px;
+    } 
+}
+
+@media(max-width:453px) {
+  .folhasQuiz {
+        width: 400px;
+    } 
+    .textoImpacto h2 {
+        font-size: 35px !important;
+        max-width: 80vw !important;
+    }
+
+    .textoImpacto p {
+        font-size: 14px !important;
+        max-width: 70vw !important;
+    }
+    .botaoImpacto {
+        font-size: 20px !important;
+    }
+}
+
+.conteudoImpacto {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.textoImpacto h2 {
+    font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
+    font-size: 55px;
+    color: #FAF9F6;
+    max-width: 40vw;
+    line-height: 1.1;
+}
+
+.textoImpacto p {
+    color: #CAD8C1;
+    font-size: 18px;
+    font-family: "Poppins",sans-serif;
+    max-width: 30vw;
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
+.botaoImpacto {
+    font-family: "Poppins",sans-serif;
+    background: #537C2E;
+    color: #FAF9F6;
+    font-size: 25px;
+    padding: 18px 36px;
+    border-radius: 10px 0 0 10px;
+}
