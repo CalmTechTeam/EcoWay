@@ -15,6 +15,8 @@ export function quiz() {
 
     const resultados = document.querySelector(".resultados");
 
+    const opcoes = document.querySelectorAll(".opcaoQuiz");
+
     let arrayPontos = [];
 
     let soma = 0;
@@ -171,6 +173,13 @@ export function quiz() {
         };
 
         carrosselContainer.style.transform = `translateX(-${(slideAtual * 100)}%)`;
+    });
+
+    opcoes.forEach((opcao) => {
+        opcao.addEventListener("click", () => {
+            const input = opcao.querySelector("input");
+            input.checked = true;
+        });
     });
 
 };
