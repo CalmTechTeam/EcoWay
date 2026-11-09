@@ -3,7 +3,7 @@
     padding: 45px 55px;
     font-family: "Poppins", sans-serif;
     display: flex;
-    align-items: center;
+    align-items: self-start;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 35px;
@@ -41,4 +41,13 @@
 
 .footer ul a {
     color: #FAF9F6;
+}
+
+.footerFigma span {
+    color: #babdbd;
+}
+
+.footerFigma a {
+    color: #65B236;
+    text-decoration: underline;
 }

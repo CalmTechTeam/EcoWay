@@ -348,9 +348,9 @@
       </section>
       <section id="monitoramento" class="monitoramento" aria-label="Monitoramento da temperatura e rotas">
         <h2 class="tituloSecundario">Mapa</h2>
-        <aside class="aviso">
+        <aside class="aviso" id="aviso">
           <div class="fecharAviso">X</div>
-          <div>
+          <div id="conteudoAviso">
             <p>Esta página, os mapas e o sensor ambiental possuem caráter demonstrativo, apresentando 
               uma simulação de como a plataforma EcoWay funcionaria na prática. Quer conhecer melhor? 
               Acesse nossa <span><a target="_blank" href="https://wokwi.com/projects/479766126716612609">simulação no Wokwi</a></span> 
@@ -410,6 +410,153 @@
           </div>
         </div>
       </section>
+      <section id="quiz" class="quiz container" aria-label="Quiz para saber seus hábitos sustentáveis">
+        <div class="introQuiz">
+          <img src="./src/assets/images/imgFolhas.png" alt="Folhas espalhadas" class="folhasQuiz">
+          <div class="conteudoImpacto">
+              <div class="textoImpacto">
+                  <h2>Descubra seu Impacto Ambiental</h2>
+                  <p>
+                      Responda ao quiz e descubra como seus hábitos diários
+                      impactam o meio ambiente. Ao final, confira seu resultado.
+                  </p>
+              </div>
+              <a href="#quizCarrossel" class="botaoImpacto">IR PARA QUIZ</a>
+          </div>
+        </div>
+        <div class="quizContainer" id="quizCarrossel">
+          <ul class="navQuiz">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <div class="carrosselQuiz">
+            <div class="pergunta">
+              <h4>1- Como você contribui para reduzir o calor nas cidades?</h4>
+              <div class="opcoesPerguntas">
+                <div class="opcaoQuiz">
+                  <input type="radio" name="pergunta1" id="plantar" value="10">
+                  <label for="plantar">Planto árvores e valorizo áreas verdes</label>
+                </div>
+                <div class="opcaoQuiz">
+                  <input type="radio" name="pergunta1" id="sem_costume" value="2">
+                  <label for="sem_costume">Não costumo ter atitudes relacionadas a isso</label>
+                </div>
+                <div class="opcaoQuiz">
+                  <input type="radio" name="pergunta1" id="evitar_retirar" value="7">
+                  <label for="evitar_retirar">Evito retirar plantas e árvores</label>
+                </div>
+              </div>
+            </div>
+            <div class="pergunta">
+              <h4>2- Como você contribui para reduzir o calor nas cidades?</h4>
+              <div class="opcoesPerguntas">
+                <div class="opcaoQuiz">
+                  <input type="radio" name="pergunta2" id="separar" value="10">
+                  <label for="pergunta2">Separo os resíduos para reciclagem</label>
+                </div>
+                <div class="opcaoQuiz">
+                  <input type="radio" name="pergunta2" id="descarte_sem_separar" value="7">
+                  <label for="pergunta2">Descarto o lixo em lixeiras, sem separar</label>
+                </div>
+                <div class="opcaoQuiz">
+                  <input type="radio" name="pergunta2" id="inadequado_lixo" value="2">
+                  <label for="pergunta2">Às vezes descarto resíduos em locais inadequados</label>
+                </div>
+              </div>
+            </div>
+            <div class="pergunta">
+              <h4>3- Como você lida com o desperdício de água?</h4>
+              <div class="opcoesPerguntas">
+                <div class="opcaoQuiz">
+                  <input type="radio" name="pergunta3" id="economizar" value="10">
+                  <label for="pergunta3">Economizo água e reutilizo quando possível</label>
+                </div>
+                <div class="opcaoQuiz">
+                  <input type="radio" name="pergunta3" id="tentar_economizar" value="7">
+                  <label for="pergunta3">Tento economizar, mas às vezes desperdiço</label>
+                </div>
+                <div class="opcaoQuiz">
+                  <input type="radio" name="pergunta3" id="sem_habito_consumo" value="2">
+                  <label for="pergunta3">Não tenho o hábito de controlar o consumo</label>
+                </div>
+              </div>
+            </div>
+            <div class="pergunta">
+              <h4>4- Como você contribui para reduzir a poluição e o aquecimento urbano?</h4>
+              <div class="opcoesPerguntas">
+                <div class="opcaoQuiz">
+                  <input type="radio" name="pergunta4" id="transporte_bom" value="10">
+                  <label for="pergunta4">Utilizo bicicleta, caminhada ou transporte público</label>
+                </div>
+                <div class="opcaoQuiz">
+                  <input type="radio" name="pergunta4" id="transporte_bom_moderado" value="7">
+                  <label for="pergunta4">Utilizo carro ou moto na maioria dos deslocamentos</label>
+                </div>
+                <div class="opcaoQuiz">
+                  <input type="radio" name="pergunta4" id="outros_contribuicoes" value="5">
+                  <label for="pergunta4">Tenho outras formas de contribuir</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="quizBotoes">
+            <button type="button" id="btnAnteriorQuiz">ANTERIOR</button>
+            <button type="button" id="btnProximoQuiz">PRÓXIMO</button>
+          </div>
+        </div>
+        <div class="resultados">
+          <h3>Resultados</h3>
+          <div class="valoresResultadosContainer">
+            <div class="resultadoGeral">
+              <h4>Geral</h4>
+              <div class="progressoCircular">
+                  <div class="progressoTexto"></div>
+              </div>
+            </div>
+            <div class="resultadoEspecifico">
+              <h4>Seu desempenho por categoria</h4>
+              <div class="especificoItem">
+                <div class="progressoInfo">
+                  <span>Arborização e calor</span>
+                  <span class="valorProgresso"></span>
+                </div>
+                <div class="barraProgresso">
+                  <div class="preenchimento"></div>
+                </div>
+              </div>
+              <div class="especificoItem">
+                <div class="progressoInfo">
+                  <span>Descarte de resíduos</span>
+                  <span class="valorProgresso"></span>
+                </div>
+                <div class="barraProgresso">
+                  <div class="preenchimento"></div>
+                </div>
+              </div>
+              <div class="especificoItem">
+                <div class="progressoInfo">
+                  <span>Consumo de água</span>
+                  <span class="valorProgresso"></span>
+                </div>
+                <div class="barraProgresso">
+                  <div class="preenchimento"></div>
+                </div>
+              </div>
+              <div class="especificoItem">
+                <div class="progressoInfo">
+                  <span>Mobilidade sustentável</span>
+                  <span class="valorProgresso"></span>
+                </div>
+                <div class="barraProgresso">
+                  <div class="preenchimento"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="logoFooter">
@@ -429,8 +576,12 @@
         <h5>Contato</h5>
         <ul>
           <li><a href="./index.html"><img src="./src/assets/images/imgInstagram.svg" alt="Instagram"></a></li>
-          <li><a href="./index.html"><img src="./src/assets/images/imgGitHub.svg" alt="GitHub"></a></li>
+          <li><a target="_blank" href="https://github.com/CalmTechTeam/EcoWay"><img src="./src/assets/images/imgGitHub.svg" alt="GitHub"></a></li>
         </ul>
+      </div>
+      <div class="footerFigma">
+        <h5>Figma</h5>
+        <span>Confira <a target="_blank" href="https://www.figma.com/design/eb8IvAwl54ELKeyeElbxIX/EcoWay?node-id=0-1&p=f&t=tHQ3ZLoDjFLrgUxk-0">nosso projeto</a> feito pelo Figma</span>
       </div>
     </footer>
 
