@@ -127,10 +127,20 @@
     box-shadow: 0 0 3px rgba(0,0,0,0.3);
 }
 
+.navQuiz li.atual {
+   background: #C75BCA;
+}
+
+.navQuiz li.feito {
+   background: #975CE5;
+   opacity: 1;
+}
+
 .pergunta {
     width: 100%;
     min-width: 100%;
-    margin: 0 1.5rem;
+    flex: 0 0 100%;
+    padding: 0 10px;
 }
 
 .pergunta h4 {
