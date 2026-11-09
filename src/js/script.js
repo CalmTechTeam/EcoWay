@@ -1,5 +1,17 @@
 // intro animada ==============================================================
 const intro = document.getElementById('intro');
+
+// teste intro, se for primeiro acesso, mostra intro, do contrario, não
+if (localStorage.getItem("intro")) {
+  intro.style.display = "none"
+}
+
+// mostra intro novamente
+document.getElementById("showIntro").addEventListener("click", () => {
+  localStorage.removeItem("intro");
+})
+
+
 const introContainer = document.getElementById('introContainer');
 const plantaEsquerda = document.querySelector('.ladoEsquerdo');
 const plantaDireita = document.querySelector('.ladoDireito');
@@ -27,6 +39,8 @@ intro.addEventListener('click', () => {
   introContainer.classList.remove('bgBlack');
 });
 
+
+localStorage.setItem("intro", true);
 
 // animação scroll lateral desafios ============================================
 const elemento = document.querySelector('#desafios');
