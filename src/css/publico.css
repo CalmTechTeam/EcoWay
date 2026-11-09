@@ -9,24 +9,6 @@
     margin-bottom: 50px;
 }
 
-.botaoNav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px;
-    gap: 30px;
-}
-
-.botaoNav img {
-    width: 80px;
-    cursor: pointer;
-    transition: all 0.4s ease;
-}
-
-.botaoNav img:hover {
-    transform: scale(1.08);
-}
-
 .listaImgsPublico {
     max-height: 300px;
     display: flex;
@@ -118,38 +100,48 @@
     flex-shrink: 0;
 }
 
-.conteudoImg {
-    position: relative;
-}
-
-.slide button {
-    background: #000D0C;
-    border: none;
-    color: #FAF9F6;
-    font-size: 25px;
-    padding: 30px 60px;
+.conteudoInfo .botaoNav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 35px;
+    padding: 20px 0;
     position: absolute;
     left: 100px;
-    border-radius: 40px 0 40px 40px;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    width: 90%;
 }
 
-.slide:nth-child(1) button {
+.slide:nth-of-type(1) .botaoNav {
+    bottom: -120px;
+}
+
+.slide:nth-of-type(2) .botaoNav {
+    bottom: -130px;
+}
+
+.slide:nth-of-type(3) .botaoNav {
+    bottom: -80px;
+}
+
+.slide:nth-of-type(4) .botaoNav {
     bottom: -140px;
 }
 
-.slide:nth-child(2) button {
-    bottom: -150px;
+.conteudoInfo .botaoNav img {
+    width: 65px;
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: block;
 }
 
-.slide:nth-child(3) button {
-    bottom: -100px;
+.botaoNav img:hover {
+    transform: scale(1.08);
 }
 
-.slide:nth-child(4) button {
-    bottom: -160px;
+.conteudoImg {
+    position: relative;
 }
 
 .slide {
@@ -161,6 +153,7 @@
 .slides {
     display: flex;
     transition: all 0.5s ease-in-out;
+    padding-top: 120px;
 }
 
 .carrossel {
@@ -211,13 +204,7 @@
 @media(max-width: 1057px) {
    .listaImgsPublico li:nth-of-type(4) img {
         width: 350px;
-    }
-
-    .slide button {
-        position: initial;
-        padding: 15px 30px;
-        margin-top: 10px;
-        border-radius: 10px;
+        margin-bottom: 20%;
     }
 
     .conteudoInfo {
@@ -229,19 +216,17 @@
     }
 
     .slide {
+        padding: 0 20px;
+        margin-top: 0;
+        height: auto;
+        flex-direction: row-reverse;
+        align-items: center;
         gap: 0;
-    }
-
-    .slide button {
-        position: static;
-        padding: 15px 30px;
-        margin-top: 20px;
-        border-radius: 10px;
-        width: 100%;
     }
 
     .conteudo img {
         display: none;
+        padding-bottom: 3rem;
     }
 
     .conteudoInfo p {
@@ -249,72 +234,97 @@
     }
 
     .conteudo {
+        left: 0;
         height: 500px;
         width: 100%;
         padding: 30px;
     }
+
+    .conteudoInfo .botaoNav {
+        position: static;
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 25px;
+    }
 }
 
-@media(max-width: 787px) {
-   .slide {
+@media (max-width: 860px) {
+    .publico {
+        padding: 30px 25px;
+    }
+
+    .slide {
+        gap: 20px;
+    }
+
+    .listaImgsPublico li:nth-of-type(4) img {
+        width: 280px;
+        margin-bottom: 50%;
+    }
+
+    .conteudoInfo .botaoNav {
+        gap: 25px;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 730px) {
+    .slide {
         flex-direction: column;
-        gap: 8rem;
-        justify-content: center;
-        align-items: center;
-        margin-top: 3rem;
-   }
-}
+        align-items: flex-start;
+        gap: 25px;
+    }
 
-@media(max-width: 566px) {
-   .listaImgsPublico li  img {
+    .listaImgsPublico {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+
+    .listaImgsPublico li:nth-of-type(4) img {
         width: 300px;
-        display: block;
-        margin-left: 0;
-        margin-right: 4rem;
+        margin: 10% auto;
+    }
+
+    .conteudo {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        top: 0;
+        left: 0;
     }
 
     .conteudoInfo {
-        text-align: left;
+        position: relative;
+        width: 100%;
+        top: 0;
+        left: 0;
     }
 
     .conteudoInfo h4 {
         text-align: left;
     }
 
-    .conteudoInfo ul {
-        justify-content: flex-start;
+    .conteudoInfo p {
+        width: 100%;
     }
 
-    .slide {
-        justify-content: flex-start;
-    }
-
-    .conteudo {
-        margin-left: 0;
-        padding-left: 0;
+    .conteudoInfo .botaoNav {
+        width: 100%;
+        gap: 25px;
+        margin-top: 20px;
     }
 }
-@media(max-width: 506px) {
-    .listaImgsPublico img {
-        width: 250px !important;
-        margin: 0 4rem;
-    }
-    .slide button {
-        padding: 10px 20px;
-        font-size: 20px;
+@media (max-width: 460px) {
+    .listaImgsPublico li:nth-of-type(4) img {
+        width: 250px;
+        margin: 30% auto;
     }
 }
-@media(max-width: 407px) {
-    .listaImgsPublico img {
-        width: 190px !important;
-    }
-
-    .conteudoInfo {
-        height: 1200px;
-        width: 160%;
-    }
-
-    .botaoNav img {
-        width: 60px;
+@media (max-width: 400px) {
+    .listaImgsPublico li:nth-of-type(4) img {
+        width: 200px;
+        margin-right: 90%;
     }
 }
