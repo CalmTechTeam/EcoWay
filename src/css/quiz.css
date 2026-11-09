@@ -222,6 +222,19 @@
 .resultados {
     background: #031312;
     padding: 45px 55px 45px 0;
+    display: none;
+    animation: resultados 0.5s forwards;
+}
+
+@keyframes resultados {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
 .resultados h3 {
@@ -244,7 +257,7 @@
     border-radius: 0 15px 15px 0;
 }
 
-.valoresResultadosContaine {
+.valoresResultadosContainer {
     font-family: "Poppins", sans-serif;
     padding: 45px 55px;
     display: flex;
@@ -254,7 +267,7 @@
     justify-content: space-around;
 }
 
-.valoresResultadosContaine h4 {
+.valoresResultadosContainer h4 {
     text-align: center;
     color: #FAF9F6;
     margin-bottom: 15px;
@@ -279,7 +292,7 @@
 .especificoItem {
     color: #E1E9DD;
     font-size: 22px;
-    --progresso: 30%;
+    --progresso: 0%;
     width: 100%;
     margin-bottom: 25px;
 }

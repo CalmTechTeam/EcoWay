@@ -8,7 +8,16 @@ export function quiz() {
     const nav = document.querySelector(".navQuiz");
     const navQuiz = nav.querySelectorAll("li")
 
+    const itemProgresso = document.querySelectorAll(".especificoItem");
+    const porcentagem = document.querySelectorAll(".valorProgresso");
+
+    const geralProgresso = document.querySelector(".progressoTexto");
+
+    const resultados = document.querySelector(".resultados");
+
     let arrayPontos = [];
+
+    let soma = 0;
 
     let slideAtual = 0;
 
@@ -35,6 +44,20 @@ export function quiz() {
             inputsSelecionadosLista.forEach((input) => {
                 arrayPontos.push(+input.value);
             });
+
+            itemProgresso.forEach((item, index) => {
+                item.style.setProperty("--progresso", `${arrayPontos[index] * 10}%`);
+                porcentagem[index].textContent = `${(arrayPontos[index]) * 10}%`;
+            });
+
+            arrayPontos.forEach((ponto) => {
+                soma = soma + ponto * 10;
+            });
+
+            soma = (soma / arrayPontos.length).toFixed(1);
+            geralProgresso.innerHTML = `${soma.replace(".", ",")} %`
+
+            resultados.style.display = "block";
 
             return;
         };
