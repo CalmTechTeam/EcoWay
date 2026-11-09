@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <section id="intro" class="preventClicks">
+    <section id="intro" class="preventClicks" aria-label="Introdução do projeto">
       <div class="introContainer bgBlack" id="introContainer">
         <div class="ladoEsquerdo">
           <img class="planta" src="./src/assets/images/intro/imgPlanta-esquerda.png" alt="Planta Esquerda">
@@ -32,7 +32,7 @@
     </section>
 
     <header>
-      <section id="headerContent" class="container">
+      <section id="headerContent" class="container" aria-label="Header">
         <img src="./src/assets/images/header/imgLogo.png" alt="Logo EcoWay">
         <nav>
           <ul>
@@ -46,7 +46,7 @@
 
     <main>
       <!-- seção inicial ================================================================= -->
-      <section id="presentation" class="container">
+      <section id="presentation" class="container" aria-label="Apresentação do projeto">
         <h2 class="titulo">
           Calor Intenso & Colapso no Ambiente
         </h2>
@@ -62,7 +62,7 @@
       </section>
 
       <!-- seção desafios ==================================================================== -->
-      <section id="desafios">
+      <section id="desafios" aria-label="Desafios que serão resolvidos e enfrentados">
         <article id="desafio1" class="desafio right">
           <div class="desafiosContainer container right" >
             <img src="./src/assets/images/desafios/imgDesafio1.png" alt="pessoas numa praça">
@@ -108,7 +108,7 @@
       </section>
 
       <!-- seção tecnologias ============================================================ -->
-      <section id="tecnologias">
+      <section id="tecnologias" aria-label="Tecnologias utilizadas no projeto">
         <h2>Tecnologias</h2>
         <article class="tecnologiasContainer container">
           <div id="tecnologiaHtml" class="tecnologia">
@@ -137,8 +137,7 @@
         </article>
       </section>
 
-    </main>
-    <main>
+      <!-- seção de objetivos ============================================================ -->
       <section id="objetivos" class="objetivos" aria-label="Seção dos objetivos do projeto">
         <h2 class="tituloSecundario">Objetivos</h2>
         <ul class="objetivosLista">
@@ -174,6 +173,8 @@
           </li>
         </ul>
       </section>
+
+      <!-- seção do púbico ============================================================ -->
       <section id="publico" class="publico" aria-label="Público alvo do projeto">
         <h2 class="tituloSecundario">Público</h2>
         <div class="carrossel">
@@ -275,6 +276,8 @@
           </div>
         </div>
       </section>
+
+      <!-- seção dos benefícios ============================================================ -->
       <section id="beneficios" class="beneficios" aria-label="Benefícios do projeto">
         <h2 class="tituloSecundario">Benefícios</h2>
         <div class="beneficiosContainer">
@@ -346,6 +349,8 @@
           </div>
         </div>
       </section>
+
+      <!-- seção do monitoramento ============================================================ -->
       <section id="monitoramento" class="monitoramento" aria-label="Monitoramento da temperatura e rotas">
         <h2 class="tituloSecundario">Mapa</h2>
         <aside class="aviso" id="aviso">
@@ -410,7 +415,9 @@
           </div>
         </div>
       </section>
-      <section id="quiz" class="quiz container" aria-label="Quiz para saber seus hábitos sustentáveis">
+
+      <!-- seção do quiz ============================================================ -->
+      <section id="quiz" class="quiz " aria-label="Quiz para saber seus hábitos sustentáveis">
         <div class="introQuiz">
           <img src="./src/assets/images/imgFolhas.png" alt="Folhas espalhadas" class="folhasQuiz">
           <div class="conteudoImpacto">
