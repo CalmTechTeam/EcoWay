@@ -1,0 +1,327 @@
+.monitoramento {
+    padding: 45px 55px;
+    background: #031312;
+}
+
+.monitoramento h2 {
+    color: #FAF9F6;
+}
+
+.aviso {
+    background: #081B1A;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    padding: 15px 30px;
+    font-family: "Poppins", sans-serif;
+    color: #e6e5e3;
+    position: relative;
+    margin: 45px 0 65px 0;
+}
+
+.aviso span a {
+    color: #65B236;
+    text-decoration: underline;
+}
+
+.fecharAviso {
+    background: #D21717;
+    display: block;
+    justify-self: left;
+    padding: 5px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    position: absolute;
+    top: -18px;
+    left: -18px;
+}
+
+.formMapa {
+    background: #FAF9F6;
+    padding: 35px;
+    border-radius: 7px 7px 0 0;
+    width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 0 2px rgba(0,0,0,0.3);
+    font-family: "Poppins", sans-serif;
+}
+
+.formItem {
+    margin-bottom: 35px;
+}
+
+.formItem input:nth-of-type(1) {
+    cursor: no-drop;
+}
+
+.formItem input, .formItem select {
+    width: 100%;
+    padding: 15px 30px;
+    border-radius: 6px;
+    border: none;
+    background: #E4E4E4;
+    box-shadow: 0 0 2px rgba(0,0,0,0.3);
+    margin-top: 5px;
+    font-family: "Poppins", sans-serif;
+    color: #555E5E;
+    font-size: 17px;
+}
+
+.formItem select:focus {
+    border: 2px solid #65B236;
+    cursor: pointer;
+    outline: none;
+}
+
+.formItem label {
+    color: #031312;
+    display: block;
+    font-size: 19px;
+}
+
+.formMapa button {
+    background: #C8CACA;
+    color: #FAF9F6;
+    padding: 18px 36px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    justify-self: right;
+    margin-top: 35px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.formMapa button:hover {
+    background: #a7a8a8;
+}
+
+.monitoramentoMapa {
+    background: #FAF9F6;
+    font-family: "Poppins", sans-serif;
+    width: 1000px;
+    margin: 0 auto;
+    border-radius: 0 0 7px 7px;
+    display: none;
+    animation: monitoramento 0.4s forwards;
+}
+
+@keyframes monitoramento {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media(max-width:1088px) {
+    .monitoramentoMapa {
+        width: 800px;
+    }
+    .formMapa {
+        width: 800px;
+    }
+}
+
+@media(max-width:886px) {
+    .monitoramentoMapa {
+        width: 600px;
+    }
+    .formMapa {
+        width: 600px;
+    }
+    .umidade {
+        margin: 0 !important;
+    }
+    .monitoramentoAmbiente {
+        justify-content: center;
+    }
+    .umidade,.temperatura {
+        width: 100%;
+    }
+    .temperaturaInfo p, .umidadeInfo p {
+        margin: 0 0 0 auto;
+    }
+}
+
+@media(max-width:695px) {
+    .monitoramentoMapa {
+        width: 500px;
+    }
+    .formMapa {
+        width: 500px;
+    }
+}
+
+@media(max-width:595px) {
+    .monitoramentoMapa {
+        width: 400px;
+    }
+    .formMapa {
+        width: 400px;
+    }
+}
+
+@media(max-width:495px) {
+    .monitoramentoMapa {
+        width: 350px;
+    }
+    .formMapa {
+        width: 350px;
+    }
+}
+
+@media(max-width:435px) {
+    .monitoramentoMapa {
+        width: 300px;
+    }
+    .formMapa {
+        width: 300px;
+    }
+    .temperaturaInfo, .umidadeInfo {
+        flex-wrap: wrap;
+    }
+    .temperaturaInfo p, .umidadeInfo p {
+        margin: 0 auto 0 0;
+    }
+}
+
+@media(max-width:435px) {
+    .monitoramentoMapa {
+        width: 250px;
+    }
+    .formMapa {
+        width: 250px;
+    }
+
+    .formMapa input {
+        font-size: 13px;
+    }
+    .monitoramentoAmbiente h4 {
+        font-size: 26px;
+    }
+}
+
+.listaLegenda {
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    flex-wrap: wrap;
+    font-size: 18px;
+    color: #222525;
+    gap: 25px;
+    padding: 20px 35px;
+}
+
+.listaLegenda li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.listaLegenda li:nth-of-type(1)::before, .listaLegenda li:nth-of-type(2)::before,
+.listaLegenda li:nth-of-type(3)::before{
+    content: "";
+    width: 30px;
+    height: 8px;
+}
+
+.listaLegenda li:nth-of-type(1)::before {
+    background: #65B236;
+}
+
+.listaLegenda li:nth-of-type(2)::before {
+    background: #EFEF2F;
+}
+
+.listaLegenda li:nth-of-type(3)::before {
+    background: #D21717;
+}
+
+.listaLegenda li:nth-of-type(4)::before {
+    content: url("../assets/images/imgCaminhoFresco.svg");
+}
+
+.listaLegenda li:nth-child(5)::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #3216E8;
+    box-shadow: 12px 0 #3216E8, 24px 0 #3216E8, 36px 0 #3216E8;
+    margin-right: 40px;
+    flex-shrink: 0;
+}
+
+.mapaImg {
+    padding: 20px 35px;
+    margin-bottom: 30px;
+}
+
+.mapaImg img {
+    width: 100%;
+    border-radius: 5px;
+    display: none;
+}
+
+.monitoramentoAmbiente {
+    padding: 20px 35px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.temperatura, .umidade, .ambienteLuz {
+    background: #031312;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.monitoramentoAmbiente h3 {
+    color: #FAF9F6;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.temperaturaMedida, .umidadeMedida {
+    background: #304C17;
+    color: #E4E4E4;
+    justify-self: left;
+    padding: 20px 30px;
+    font-size: 45px;
+    border-radius: 5px;
+}
+
+.temperaturaInfo p, .umidadeInfo p {
+    color: #D21717;
+    font-size: 18px;
+}
+
+.temperaturaInfo, .umidadeInfo {
+    display: flex;
+    align-items: self-end;
+    gap: 20px;
+}
+
+.ambienteLuz {
+    width: 100%;
+}
+
+.ambienteLuz span {
+    font-weight: normal;
+    margin-left: 15px;
+}
+
+.umidade {
+    margin: 0 0 0 auto;
+}

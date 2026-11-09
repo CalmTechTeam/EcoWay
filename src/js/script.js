@@ -73,4 +73,8 @@ window.addEventListener('scroll', verificarScroll, {
 
 window.addEventListener('resize', verificarScroll);
 
-verificarScroll();
+verificarScroll(); import { slides } from "./slides.js";
+import { monitoramentoMapa } from "./monitoramento.js";
+
+slides();
+monitoramentoMapa();

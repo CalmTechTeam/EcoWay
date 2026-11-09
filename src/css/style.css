@@ -1,3 +1,10 @@
+@import './geral.css';
+@import './objetivos.css';
+@import './publico.css';
+@import './beneficios.css';
+@import './footer.css';
+@import './monitoramento.css';
+
 /* Variáveis ========================================================================*/
 :root {
   --azul-cinza: #555E5E;
