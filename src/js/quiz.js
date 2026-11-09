@@ -40,7 +40,10 @@ export function quiz() {
         if (btnProximo.textContent == "ENVIAR") {
             nav.children[3].classList.add("feito")
             const inputsSelecionadosLista = document.querySelectorAll('.pergunta input:checked');
-
+            
+            arrayPontos = [];
+            soma = 0;
+            
             inputsSelecionadosLista.forEach((input) => {
                 arrayPontos.push(+input.value);
             });
