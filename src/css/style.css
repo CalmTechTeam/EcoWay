@@ -251,7 +251,7 @@ main {
 
 /* seção de apresentação ============================================================= */
 main #presentation {
-  background-image: url(../assets/images/apresentacao/section1.png);
+  background-image: url(../assets/images/apresentacao/imgSection1.png);
   background-size: 70%;
   background-repeat: no-repeat;
   background-position-x: right;
@@ -460,7 +460,7 @@ main #presentation .link svg{
 }
 #tecnologias h2::before,
 #tecnologias h2::after{
-  content: url(../assets/images/tecnologias/pontoRoxo.png);
+  content: url(../assets/images/tecnologias/imgPontoRoxo.png);
   width: fit-content;
   display: block;
   padding-bottom: 20px;
