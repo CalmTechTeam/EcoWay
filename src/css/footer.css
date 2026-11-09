@@ -42,3 +42,12 @@
 .footer ul a {
     color: #FAF9F6;
 }
+
+.footerFigma span {
+    color: #babdbd;
+}
+
+.footerFigma a {
+    color: #65B236;
+    text-decoration: underline;
+}
