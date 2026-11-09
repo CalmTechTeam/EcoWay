@@ -1,7 +1,33 @@
+/* Variáveis ========================================================================*/
+:root {
+  --azul-cinza: #555E5E;
+  --cinza-claro: #FAF9F6;
+  --cinza-escuro: #222525;
+  --verde: #304C17;
+  --verde-brilhante: #65B236;
+  --verde-claro: #CAD8C1;
+  --roxo: #9D2BA1;
+  --fonte-titulos: "Cormorant Garamond";
+}
+
+/* Reset ===========================================================================*/
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Container ========================================================================*/
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* main ===============================================================================*/
+main {
+  background-color: #fff;
 }
 
 ul {

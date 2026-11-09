@@ -1,0 +1,71 @@
+/* seção de apresentação ============================================================= */
+main #presentation {
+  background-image: url(../assets/images/apresentacao/imgSection1.png);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  height: 600px;
+  position: relative;
+}
+
+main #tecnologias::before,
+main #tecnologias::after,
+main #presentation::before,
+main #presentation::after {
+  content: "";
+  background: url(../assets/images/apresentacao/imgDetalhe.png);
+  background-size: contain;
+  display: block;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+}
+main #tecnologias::before,
+main #presentation::before{
+  top: 45px;
+  right: 0;
+  transform: rotate(90deg);
+}
+
+main #tecnologias::after,
+main #presentation::after {
+  bottom: 0;
+  left: 0;
+}
+main #presentation .titulo {
+  margin-top: 60px;
+  width: 45%;
+}
+main .titulo {
+  font-family: "Cormorant Garamond", sans-serif;
+  font-weight: bold;
+  font-size: 55px;
+}
+main #presentation .texto {
+  width: 50%;
+}
+main .texto {
+  color: var(--azul-cinza);
+  font-size: 24px;
+}
+main #presentation .link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: fit-content;
+  border-radius: 10px;
+  background-color: var(--verde);
+  color: var(--verde-claro);
+  padding: 15px 30px;
+  cursor: pointer;
+
+}
+main #presentation .link svg{
+  width: 20px;
+}

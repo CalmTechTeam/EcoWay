@@ -1,0 +1,169 @@
+/* Intro =============================================================================*/
+#intro {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  top:0;
+  z-index: 9;
+}
+
+#intro.preventClicks {
+  pointer-events: none;
+}
+
+#intro .introContainer {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  gap: 116px;
+}
+
+#intro .ladoEsquerdo,
+#intro .ladoDireito {
+  transition: .3s ease-in-out all;
+  position: relative;
+  width: 100%;
+  background: #000;
+  display: flex;
+}
+
+#intro .ladoEsquerdo{
+  z-index: 8;
+  justify-content: flex-end;
+}
+#intro .ladoDireito {
+  z-index: 7;
+  justify-content: flex-start;
+}
+
+
+#intro .ladoEsquerdo .planta,
+#intro .ladoDireito .planta {
+  height: 800px;
+  display: block;
+  position: relative;
+  animation: intro 1.5s linear forwards;
+}
+
+#intro .ladoEsquerdo .planta {
+  left: 100px;
+}
+
+#intro .ladoDireito .planta {
+  left: -100px;
+}
+
+@keyframes intro {
+  from {
+    top: 0px;
+  }
+
+  to {
+    top: -65px;
+  }
+}
+
+.fade-out-left {
+  animation: fadeOutLeft 3s ease-in-out forwards;
+}
+.fade-out-right {
+  animation: fadeOutRight 3s ease-in-out forwards;
+}
+
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-10%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+@keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(10%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+#intro .folha{
+  position: absolute;
+  z-index: 6;
+}
+
+#intro #folhaE1{
+  top: 360x;
+  right: -80px;
+  width: 1px;
+}
+#intro #folhaE2{
+  top: 360x;
+  right: -80px;
+  width: 1px;
+}
+#intro #folhaD{
+  top: 360px;
+  left: -60px;
+  width: 1px;
+}
+
+#intro #folhaE1.fadeIn{
+  animation: leaf1FadeIn 1s ease-in-out forwards;
+}
+#intro #folhaE2.fadeIn{
+  animation: leaf2FadeIn 1s ease-in-out forwards;
+}
+#intro #folhaD.fadeIn{
+  animation: leafDFadeIn 1s ease-in-out forwards;
+}
+
+@keyframes leaf1FadeIn {
+  0% {
+    top: 360px;
+    right: -80px;
+    width: 1px;
+  }
+  100% {
+    top: 100px;
+    right: 40px;
+    width: 180px;
+  }
+}
+@keyframes leaf2FadeIn {
+  0% {
+    top: 360px;
+    right: -80px;
+    width: 1px;
+  }
+  100% {
+    top: 500px;
+    right: 50px;
+    width: 50px;
+  }
+}
+@keyframes leafDFadeIn {
+  0% {
+    top: 360px;
+    left: -60px;
+    width: 1px;
+  }
+  100% {
+    top: 500px;
+    left: 130px;
+    width: 50px;
+  }
+}

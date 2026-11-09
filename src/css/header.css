@@ -1,0 +1,39 @@
+/* header =============================================================================*/
+header {
+  background-color: #000D0C;
+  height: 120px;
+  display: flex;
+  align-items: center;
+}
+
+#headerContent {
+  position: fixed;
+  z-index: 5;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FDFCF8;
+  border-radius: 30px;
+  padding: 10px 100px;
+  filter: drop-shadow(5px 5px 15px #000);
+}
+
+#headerContent ul{
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+#headerContent li{
+  list-style: none;
+}
+#headerContent li a {
+  text-decoration: none;
+  color: #000;
+}
+#headerContent li a:hover {
+  color: var(--verde);
+  transition: .3s ease-in-out all;
+  text-shadow: var(--verde) 0px 0px 5px;
+}

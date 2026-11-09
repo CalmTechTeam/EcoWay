@@ -1,0 +1,77 @@
+
+/* seção tecnologias ==============================================================*/
+#tecnologias{
+  display: flex;
+  flex-direction: column;
+  background: var(--cinza-escuro);
+  padding: 40px 0;
+  position: relative
+}
+#tecnologias h2{
+  font-size: 65px;
+  font-family: var(--fonte-titulos);
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#tecnologias h2::before,
+#tecnologias h2::after{
+  content: url(../assets/images/tecnologias/imgPontoRoxo.png);
+  width: fit-content;
+  display: block;
+  padding-bottom: 20px;
+}
+.tecnologiasContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+}
+#tecnologiaHtml{background-image: url(../assets/images/tecnologias/imgHtml.png);}
+#tecnologiaCss{background-image: url(../assets/images/tecnologias/imgCss.png);}
+#tecnologiaJs{background-image: url(../assets/images/tecnologias/imgJs.png);}
+#tecnologiaFigma{background-image: url(../assets/images/tecnologias/imgFigma.png);}
+#tecnologiaC{background-image: url(../assets/images/tecnologias/imgC.png);}
+
+.tecnologia{
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 300px;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  transition: .3s ease-in-out all;
+}
+.tecnologia h3{
+  font-size: 50px;
+  font-weight: bold;
+  -webkit-text-stroke: .2px #000;
+  text-shadow: 1px 1px 0 #000;
+  transform: rotate(-90deg);
+  transition: .3s ease-in-out all;
+}
+.tecnologia p {
+  width: 270px;
+  -webkit-text-stroke: .1px #000;
+  text-shadow: 1px 1px 0 #000;
+  opacity: 0;
+  transition: .3s ease-in-out all;
+}
+.tecnologia:hover{
+  width: 500px;
+}
+.tecnologia:hover h3{
+  transform: rotate(0);
+}
+.tecnologia:hover p{
+  opacity: 1;
+}
