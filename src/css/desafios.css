@@ -85,6 +85,7 @@
   border-radius: 20px;
   width: fit-content;
   cursor: pointer;
+  transition: all 0.4s ease;
 }
 .desafiosTextContent .roxo {
   background: var(--roxo);
@@ -114,4 +115,8 @@
 
 .desafiosTextContent .verde {
   background: var(--verde);
+}
+
+.desafiosLink:hover {
+  transform: scale(1.1);
 }
