@@ -125,6 +125,13 @@ export function quiz() {
     });
 
     btnAnterior.addEventListener('click', () => {
+        let inputSelecionado = perguntas[slideAtual].querySelector('input:checked');
+
+        if (!inputSelecionado) {
+            alert("Selecione uma opção!");
+            return;
+        };
+        
         slideAtual--;
 
         if (slideAtual < 0) {
