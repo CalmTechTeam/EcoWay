@@ -33,6 +33,7 @@ export function quiz() {
 
     btnProximo.addEventListener('click', () => {
         let inputSelecionado = perguntas[slideAtual].querySelector('input:checked');
+        const inputsSelecionadosLista = document.querySelectorAll(".carrosselQuiz input:checked");
 
         if (!inputSelecionado) {
             alert("Selecione uma opção!");
@@ -40,31 +41,37 @@ export function quiz() {
         };
 
         if (btnProximo.textContent == "ENVIAR") {
-            nav.children[3].classList.add("feito")
-            const inputsSelecionadosLista = document.querySelectorAll('.pergunta input:checked');
-            
-            arrayPontos = [];
-            soma = 0;
-            
-            inputsSelecionadosLista.forEach((input) => {
-                arrayPontos.push(+input.value);
-            });
+            if (inputsSelecionadosLista.length < 4) {
+                alert("Selecione todas as opções!");
+                return;
+            }
+            else {
+                nav.children[3].classList.add("feito")
+                const inputsSelecionadosLista = document.querySelectorAll('.pergunta input:checked');
+                
+                arrayPontos = [];
+                soma = 0;
+                
+                inputsSelecionadosLista.forEach((input) => {
+                    arrayPontos.push(+input.value);
+                });
 
-            itemProgresso.forEach((item, index) => {
-                item.style.setProperty("--progresso", `${arrayPontos[index] * 10}%`);
-                porcentagem[index].textContent = `${(arrayPontos[index]) * 10}%`;
-            });
+                itemProgresso.forEach((item, index) => {
+                    item.style.setProperty("--progresso", `${arrayPontos[index] * 10}%`);
+                    porcentagem[index].textContent = `${(arrayPontos[index]) * 10}%`;
+                });
 
-            arrayPontos.forEach((ponto) => {
-                soma = soma + ponto * 10;
-            });
+                arrayPontos.forEach((ponto) => {
+                    soma = soma + ponto * 10;
+                });
 
-            soma = (soma / arrayPontos.length).toFixed(1);
-            geralProgresso.innerHTML = `${soma.replace(".", ",")} %`
+                soma = (soma / arrayPontos.length).toFixed(1);
+                geralProgresso.innerHTML = `${soma.replace(".", ",")} %`
 
-            resultados.style.display = "block";
+                resultados.style.display = "block";
 
-            return;
+                return;
+            };
         };
 
         if (slideAtual == perguntas.length - 1) {
