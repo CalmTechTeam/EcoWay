@@ -74,6 +74,7 @@ As informações ambientais e os modelos matemáticos não substituem medições
 
 ## Links do projeto
 - **GitHub:** https://github.com/CalmTechTeam/EcoWay
+- **GitHub Pages:** https://calmtechteam.github.io/EcoWay/
 - **Protótipo Figma:** https://www.figma.com/design/eb8IvAwl54ELKeyeElbxIX/EcoWay
 - **Simulação Arduino (Wokwi):** https://wokwi.com/projects/480306692485186561
 
