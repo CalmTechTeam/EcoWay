@@ -81,6 +81,19 @@ function verificarScroll() {
   }
 }
 
+
+// Cidadão - Formulários ============================================================================
+const formDenuncia = document.getElementById("formDenuncia");
+const formAjuda = document.getElementById("formAjuda");
+const btShowForm = document.querySelectorAll(".showForm");
+
+btShowForm.forEach(element => {
+  element.addEventListener('click', () => {
+    element.id == "showFormDenuncia" ? formDenuncia.classList.add("mostrarForm") : formAjuda.classList.add("mostrarForm");
+  })
+});
+
+
 window.addEventListener('scroll', verificarScroll, {
   passive: true
 });
@@ -94,3 +107,4 @@ import { quiz } from "./quiz.js";
 slides();
 monitoramentoMapa();
 quiz();
+

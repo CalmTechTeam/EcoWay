@@ -48,7 +48,7 @@
     </header>
 
     <main>
-      <!-- seção inicial ================================================================= -->
+      <!-- seção inicial ================================================================================================ -->
       <section id="presentation" class="container" aria-label="Apresentação do projeto">
         <h2 class="titulo">
           Calor Intenso & Colapso no Ambiente
@@ -64,7 +64,7 @@
         </a>
       </section>
 
-      <!-- seção desafios ==================================================================== -->
+      <!-- seção desafios ================================================================================================= -->
       <section id="desafios" aria-label="Desafios que serão resolvidos e enfrentados">
         <article id="desafio1" class="desafio right">
           <div class="desafiosContainer container right" >
@@ -110,7 +110,7 @@
         </article>
       </section>
 
-      <!-- seção tecnologias ============================================================ -->
+      <!-- seção tecnologias =========================================================================================== -->
       <section id="tecnologias" aria-label="Tecnologias utilizadas no projeto">
         <h2>Tecnologias</h2>
         <article class="tecnologiasContainer container">
@@ -140,7 +140,7 @@
         </article>
       </section>
 
-      <!-- seção de objetivos ============================================================ -->
+      <!-- seção de objetivos ========================================================================================= -->
       <section id="objetivos" class="objetivos" aria-label="Seção dos objetivos do projeto">
         <h2 class="tituloSecundario">Objetivos</h2>
         <ul class="objetivosLista">
@@ -177,7 +177,7 @@
         </ul>
       </section>
 
-      <!-- seção do púbico ============================================================ -->
+      <!-- seção do púbico ========================================================================================== -->
       <section id="publico" class="publico" aria-label="Público alvo do projeto">
         <h2 class="tituloSecundario">Público</h2>
         <div class="carrossel">
@@ -280,7 +280,7 @@
         </div>
       </section>
 
-      <!-- seção dos benefícios ============================================================ -->
+      <!-- seção dos benefícios ================================================================================== -->
       <section id="beneficios" class="beneficios" aria-label="Benefícios do projeto">
         <h2 class="tituloSecundario">Benefícios</h2>
         <div class="beneficiosContainer">
@@ -353,7 +353,7 @@
         </div>
       </section>
 
-      <!-- seção do monitoramento ============================================================ -->
+      <!-- seção do monitoramento ========================================================================================= -->
       <section id="monitoramento" class="monitoramento" aria-label="Monitoramento da temperatura e rotas">
         <h2 class="tituloSecundario">Mapa</h2>
         <aside class="aviso" id="aviso">
@@ -419,7 +419,7 @@
         </div>
       </section>
 
-      <!-- seção do quiz ============================================================ -->
+      <!-- seção do quiz ====================================================================================== -->
       <section id="quiz" class="quiz " aria-label="Quiz para saber seus hábitos sustentáveis">
         <div class="introQuiz">
           <img src="./src/assets/images/imgFolhas.png" alt="Folhas espalhadas" class="folhasQuiz">
@@ -568,35 +568,112 @@
         </div>
       </section>
 
-      <!-- seção cidadão -->
+      <!-- seção cidadão ----------------------------------------------------------------------------------- -->
        <section id="cidadao">
         <section class="cidadaoHeaderContainer">
           <article id="cidadaoHeaderContent" class="container">
             <h2>Faça parte da Mudança</h2>
-            <p>Pequenas atitudes geram grandes transformações</p>
-            <p>Participe da nossa campanha, contribua com ações sustentáveis e ajude a construir cidades mais verdes e um futuro melhor para todos</p>
-            <div>
-              <a href="#">Ver mapa</a>
-              <a href="#">Participar</a>
+            <p>Pequenas atitudes geram grandes transformações. Participe da nossa campanha, contribua com ações sustentáveis e ajude a construir cidades mais verdes e um futuro melhor para todos</p>
+            <div class="linksContainer">
+              <a class="linkMapa" href="#">Ver mapa</a>
+              <a class="linkParticipar" href="#">Participar</a>
             </div>
           </article>
         </section>
 
-        <article>
+        <section class="cidadaoContent container">
           <h2>Como Posso Ajudar?</h2>
-          <div>
-            <h3>Denunciar problema</h3>
-            <p>Envie fotos do seu local sem sombra, sem árvores ou outros problemas</p>
-            <buttom id="showFormDenuncia">-></buttom>
-          </div>
-          <div>
-            <h3>Sugerir Melhoria</h3>
-            <p>Proponha ideias como bebedouros e coberturas em pontos de ônibus</p>
-            <buttom id="showFormDenuncia">-></buttom>
-          </div>
-        </article>
+          <article class="blocosContainer">
+            <div class="blocoAjuda">
+              <h3>Denunciar problema</h3>
+              <p>Envie fotos do seu local sem sombra, sem árvores ou outros problemas</p>
+              <buttom id="showFormDenuncia" class="showForm">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="#cad8c1" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                </svg>
+              </buttom>
+            </div>
+            <div class="blocoAjuda">
+              <h3>Sugerir Melhoria</h3>
+              <p>Proponha ideias como bebedouros e coberturas em pontos de ônibus</p>
+              <buttom id="showFormAjuda" class="showForm">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="#cad8c1" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                </svg>
+              </buttom>
+            </div>
+          </article>
+        </section>
+
+        <section id="formDenuncia" class="container">
+          <form action="" method="post">
+
+            <div class="label-input">
+              <label for="acontecimentoDenuncia">
+                <h2>O que aconteceu?</h2>  
+              </label>
+              <input id="acontecimentoDenuncia" class="inputForm" name="acontecimentoDenuncia" type="text" placeholder="Descreva o Problema">
+            </div>
+
+            <div class="label-input">
+              <label for="enderecoDenuncia">
+                <h2>Informe o Endereço</h2>  
+              </label>
+              <input id="enderecoDenuncia" class="inputForm" name="enderecoDenuncia" type="text" placeholder="Descreva o Problema">
+            </div>
+
+            <div class="label-input anexo">
+              <label for="anexoDenuncia">
+                <h2>Anexar uma Foto (opcional)</h2>
+              </label>
+              
+              <div class="anexo-submit">
+                <div class="anexoContainer">
+                  <input class="anexoInput" id="anexoDenuncia" name="anexoDenuncia" type="file" multiple>
+                </div>
+                <button id="enviarDenuncia" class="botaoSubmit" type="submit">Enviar Problema</button>
+              </div>
+
+            </div>
+          </form>
+        </section>
+
+        <section id="formAjuda" class="container">
+          <form action="" method="post">
+
+            <div class="label-input">
+              <label for="acontecimentoAjuda">
+                <h2>O que aconteceu?</h2>  
+              </label>
+              <input id="acontecimentoAjuda" class="inputForm" name="acontecimentoAjuda" type="text" placeholder="Descreva o Problema">
+            </div>
+
+            <div class="label-input">
+              <label for="enderecoAjuda">
+                <h2>Informe o Endereço</h2>  
+              </label>
+              <input id="enderecoAjuda" class="inputForm" name="enderecoAjuda" type="text" placeholder="Descreva o Problema">
+            </div>
+
+            <div class="label-input anexo">
+              <label for="anexoAjuda">
+                <h2>Anexar uma Foto (opcional)</h2>
+              </label>
+              
+              <div class="anexo-submit">
+                <div class="anexoContainer">
+                  <input class="anexoInput" id="anexoAjuda" name="anexoAjuda" type="file" multiple>
+                </div>
+                <button id="enviarAjuda" class="botaoSubmit" type="submit">Enviar Problema</button>
+              </div>
+
+            </div>
+          </form>
+        </section>
        </section>
     </main>
+
+    <!-- footer ----------------------------------------------------------------------------------- -->
     <footer class="footer">
       <div class="logoFooter">
         <a href="./index.html"><img src="./src/assets/images/imgLogo.svg" alt="Logo"></a>
