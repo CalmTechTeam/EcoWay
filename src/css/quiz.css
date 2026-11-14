@@ -1,5 +1,6 @@
 .introQuiz {
     background: #000D0C;
+    background-image: url(../assets/images/imgFolhas.png);
     width: 100%;
     min-height: 350px;
     padding: 45px 0 45px 55px;
@@ -98,13 +99,16 @@
     font-size: 25px;
     padding: 18px 36px;
     border-radius: 10px 0 0 10px;
+    transition: .3s ease-in-out all;
+}
+.botaoImpacto:hover {
+    scale: 1.1;
 }
 
 .quizContainer {
     font-family: "Poppins", sans-serif;
     width: 100%;
-    padding: 45px 55px;
-    max-width: 1400px;
+    padding: 45px 0;
     position: relative;
     overflow: hidden;
 }
@@ -163,7 +167,7 @@
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
     padding: 12px 24px;
     cursor: pointer;
-    max-width: 70%;
+    max-width: 100%;
     border-radius: 7px;
     border: 2px solid transparent;
 }

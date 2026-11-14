@@ -11,3 +11,7 @@
 @import './quiz.css';
 @import './cidadao.css';
 @import './footer.css';
+
+html{
+  scroll-behavior: smooth;
+}

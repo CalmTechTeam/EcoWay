@@ -29,6 +29,10 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+  transition: .3s ease-in-out all;
+}
+#cidadaoHeaderContent .linksContainer:hover {
+  scale: 1.1;
 }
 #cidadaoHeaderContent .linksContainer a {
   text-decoration: none;
@@ -81,6 +85,10 @@
 .blocoAjuda buttom {
   align-self: self-end;
   cursor: pointer;
+  transition: .3s ease-in-out all;
+}
+.blocoAjuda buttom:hover {
+  scale: 1.1;
 }
 .blocoAjuda svg {
   box-sizing: unset;

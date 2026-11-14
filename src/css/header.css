@@ -1,15 +1,30 @@
 /* header =============================================================================*/
 header {
   background-color: #000D0C;
-  height: 120px;
+  height: 170px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 
+#showIntro{
+  padding: 10px 20px;
+  background-color: var(--verde);
+  color: #fff;
+  border: 1px solid var(--verde-brilhante);
+  border-radius: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: .3s ease-in-out all;
+}
+#showIntro:hover {
+  background-color: var(--verde-brilhante);
+  color: var(--verde);
+}
 #headerContent {
   position: fixed;
   z-index: 5;
   left: 50%;
+  top: 20px;
   transform: translateX(-50%);
   display: flex;
   justify-content: space-between;

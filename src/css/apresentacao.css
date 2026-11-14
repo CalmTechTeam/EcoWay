@@ -1,5 +1,5 @@
 /* seção de apresentação ============================================================= */
-main #presentation {
+main #apresentacao {
   background-image: url(../assets/images/apresentacao/imgSection1.png);
   background-size: 70%;
   background-repeat: no-repeat;
@@ -15,8 +15,8 @@ main #presentation {
 
 main #tecnologias::before,
 main #tecnologias::after,
-main #presentation::before,
-main #presentation::after {
+main #apresentacao::before,
+main #apresentacao::after {
   content: "";
   background: url(../assets/images/apresentacao/imgDetalhe.png);
   background-size: contain;
@@ -26,18 +26,18 @@ main #presentation::after {
   position: absolute;
 }
 main #tecnologias::before,
-main #presentation::before{
+main #apresentacao::before{
   top: 45px;
   right: 0;
   transform: rotate(90deg);
 }
 
 main #tecnologias::after,
-main #presentation::after {
+main #apresentacao::after {
   bottom: 0;
   left: 0;
 }
-main #presentation .titulo {
+main #apresentacao .titulo {
   margin-top: 60px;
   width: 45%;
 }
@@ -46,14 +46,14 @@ main .titulo {
   font-weight: bold;
   font-size: 55px;
 }
-main #presentation .texto {
+main #apresentacao .texto {
   width: 50%;
 }
 main .texto {
   color: var(--azul-cinza);
   font-size: 24px;
 }
-main #presentation .link {
+main #apresentacao .link {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -64,8 +64,12 @@ main #presentation .link {
   color: var(--verde-claro);
   padding: 15px 30px;
   cursor: pointer;
-
+  transition: .3s ease-in-out all;
 }
-main #presentation .link svg{
+main #apresentacao .link:hover {
+  scale: 1.1;
+}
+  
+main #apresentacao .link svg{
   width: 20px;
 }

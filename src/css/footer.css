@@ -2,6 +2,8 @@
     background: #000D0C;
     padding: 45px 55px;
     font-family: "Poppins", sans-serif;
+}
+.footer .container{
     display: flex;
     align-items: self-start;
     justify-content: space-between;
@@ -37,10 +39,15 @@
     gap: 15px;
     flex-wrap: wrap;
     margin-top: 10px;
+    max-width: 300px;
 }
 
 .footer ul a {
     color: #FAF9F6;
+    transition: .3s ease-in-out all;
+}
+.footer ul a:hover {
+    color: var(--verde-brilhante);
 }
 
 .footerFigma span {
