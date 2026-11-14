@@ -264,7 +264,7 @@
 }
 
 .listaLegenda li:nth-of-type(4)::before {
-    content: url("../assets/images/imgCaminhoFresco.svg");
+    content: url("../assets/images/monitoramento/imgCaminhoFresco.svg");
 }
 
 .listaLegenda li:nth-child(5)::before {
