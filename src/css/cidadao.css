@@ -126,7 +126,7 @@
 }
 .label-input:not(.anexo)::before {
   content: "";
-  background-image: url(../assets/images/cidadao/location.png);
+  background-image: url(../assets/images/cidadao/imgLocation.png);
   background-size: contain;
   background-repeat: no-repeat;
   display: block;
@@ -185,7 +185,7 @@
   cursor: pointer;
 } 
 #anexoDenuncia::after{
-  background-image: url(../assets/images/cidadao/anexoDenuncia.png);
+  background-image: url(../assets/images/cidadao/imgAnexoDenuncia.png);
 }
 .botaoSubmit {
   width: 250px;
@@ -206,5 +206,5 @@
   background-color: var(--lilas);
 }
 #anexoAjuda::after{
-  background-image: url(../assets/images/cidadao/anexoAjuda.png);
+  background-image: url(../assets/images/cidadao/imgAnexoAjuda.png);
 }
