@@ -257,4 +257,7 @@
     max-width: 250px;
     margin: 0 auto 20px;
   }
+  #cidadaoHeaderContent .linksContainer:hover {
+    scale: 1.02;
+  }
 }
