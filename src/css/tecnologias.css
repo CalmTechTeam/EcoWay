@@ -5,7 +5,8 @@
   flex-direction: column;
   background: var(--cinza-escuro);
   padding: 40px 0;
-  position: relative
+  position: relative;
+  z-index: 2;
 }
 #tecnologias h2{
   font-size: 65px;

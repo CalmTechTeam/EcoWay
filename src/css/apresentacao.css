@@ -28,11 +28,22 @@ main #apresentacao::after {
 main #tecnologias::before,
 main #apresentacao::before{
   top: 45px;
-  right: 0;
   transform: rotate(90deg);
 }
 
-main #tecnologias::after,
+main #apresentacao::before{
+  right: 0;
+}
+
+main #tecnologias::before {
+  right: 75px;
+}
+main #tecnologias::after {
+  left: 75px;
+  bottom: 45px;
+  z-index: -1;
+}
+
 main #apresentacao::after {
   bottom: 0;
   left: 0;
