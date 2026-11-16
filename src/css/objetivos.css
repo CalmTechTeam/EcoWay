@@ -36,3 +36,9 @@
     color: #797979;
     margin-top: 10px;
 }
+
+@media (max-width: 768px) {
+  .objetivos{
+    padding: 0;
+  }
+}

@@ -84,3 +84,35 @@ main #apresentacao .link:hover {
 main #apresentacao .link svg{
   width: 20px;
 }
+
+@media (max-width: 768px) {
+  main #apresentacao {
+    height: auto;
+    min-height: 520px;
+    margin-top: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-size: 100%;
+    background-position: center top;
+  }
+main #tecnologias::before,
+main #apresentacao::before{
+  top: 0px;
+  right: 0;
+  transform: rotate(90deg);
+}
+  main #apresentacao .titulo,
+  main #apresentacao .texto {
+    width: 100%;
+  }
+  main #apresentacao .titulo{
+    margin-top: 70px;
+    width: 65%;
+  }
+  main .titulo {
+    font-size: 40px;
+  }
+  main .texto {
+    font-size: 18px;
+  }
+}

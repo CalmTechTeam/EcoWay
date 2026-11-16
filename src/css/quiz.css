@@ -66,6 +66,38 @@
     }
 }
 
+@media (max-width: 768px) {
+  .introQuiz {
+    min-height: auto;
+    padding: 70px 10px 35px;
+  }
+  .conteudoImpacto {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+  .textoImpacto h2,
+  .textoImpacto p {
+    max-width: 100% !important;
+  }
+  .botaoImpacto {
+    align-self: stretch;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .navQuiz {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .opcoesPerguntas {
+    margin: 0;
+  }
+  .resultados,
+  .valoresResultadosContainer {
+    padding: 30px 10px;
+  }
+}
+
 .conteudoImpacto {
     position: relative;
     z-index: 2;

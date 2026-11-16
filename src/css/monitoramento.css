@@ -352,3 +352,15 @@
 .umidade {
     margin: 0 0 0 auto;
 }
+
+@media (max-width: 768px) {
+    .listaLegenda,
+    .mapaImg,
+    .monitoramentoAmbiente {
+        padding-inline: 10px;
+    }
+    .temperaturaMedida,
+    .umidadeMedida {
+        font-size: 30px;
+    }
+}

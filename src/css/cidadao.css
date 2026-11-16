@@ -48,6 +48,7 @@
 }
 #cidadaoHeaderContent .linksContainer a:last-child {
   background-color: var(--verde);
+  text-align: center;
 }
 
 .cidadaoContent{
@@ -208,4 +209,52 @@
 }
 #anexoAjuda::after{
   background-image: url(../assets/images/cidadao/imgAnexoAjuda.png);
+}
+
+@media (max-width: 768px) {
+  .cidadaoHeaderContainer {
+    height: auto;
+    padding: 100px 0 30px;
+    background-position: center;
+  }
+  #cidadaoHeaderContent h2,
+  .cidadaoContent h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+  #cidadaoHeaderContent p {
+    font-size: 19px;
+  }
+  #cidadaoHeaderContent .linksContainer,
+  .blocosContainer,
+  .anexo-submit {
+    flex-direction: column;
+    width: 100%;
+  }
+  #cidadaoHeaderContent .linksContainer a,
+  .blocoAjuda {
+    width: 100%;
+  }
+  .blocosContainer {
+    gap: 20px;
+  }
+  .blocoAjuda {
+    height: auto;
+    min-height: 180px;
+  }
+  .anexoContainer,
+  #anexoAjuda::file-selector-button,
+  #anexoDenuncia::file-selector-button,
+  .anexoInput::after {
+    width: 100%;
+    max-width: 400px;
+  }
+  .anexoContainer {
+    margin: 0 auto;
+  }
+  .botaoSubmit {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto 20px;
+  }
 }

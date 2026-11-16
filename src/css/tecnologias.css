@@ -76,3 +76,26 @@
 .tecnologia:hover p{
   opacity: 1;
 }
+
+@media (max-width: 768px) {
+  #tecnologias h2 {
+    font-size: 45px;
+  }
+  .tecnologiasContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+  .tecnologia,
+  .tecnologia:hover {
+    width: 100%;
+    height: 360px;
+    margin: 10px 0;
+  }
+  .tecnologia h3 {
+    transform: rotate(0);
+  }
+  .tecnologia p {
+    width: 100%;
+    opacity: 1;
+  }
+}

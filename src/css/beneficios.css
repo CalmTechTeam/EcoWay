@@ -108,3 +108,16 @@
         justify-content: center;
     } 
 }
+
+@media(max-width:768px) {
+  .beneficios {
+    padding: 35px 10px;
+  }
+  .beneficiosContainer {
+    gap: 20px;
+  }
+  .beneficioItem {
+    width: 100%;
+    max-width: 250px;
+  }
+}

@@ -323,6 +323,13 @@
     }
 }
 @media (max-width: 400px) {
+    .carrossel{
+        padding-left: 0;
+    }
+    .carrossel .slides{
+        padding-top: 0;
+    }
+
     .listaImgsPublico li:nth-of-type(4) img {
         width: 200px;
         margin-right: 90%;

@@ -58,3 +58,13 @@
     color: #65B236;
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 35px 10px;
+  }
+  .footer .container {
+    flex-direction: column;
+    gap: 25px;
+  }
+}

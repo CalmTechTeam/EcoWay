@@ -76,3 +76,12 @@ a {
     border: 2px solid #222525;
     border-radius: 50%;
 }
+
+/* Mobile =========================================================================== */
+@media (max-width: 768px) {
+  .container{
+    width: 100%;
+    padding-inline: 10px !important;
+  }
+
+}

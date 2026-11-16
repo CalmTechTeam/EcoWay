@@ -120,3 +120,36 @@
 .desafiosLink:hover {
   transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+  #desafios {
+    margin: 60px 0;
+    gap: 35px;
+  }
+  .desafio::before,
+  .desafiosContainer::before {
+    display: none;
+  }
+  .desafiosContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .desafiosContainer.left {
+    flex-direction: column-reverse;
+  }
+  .desafiosContainer img {
+    width: 100%;
+    max-width: 400px;
+  }
+  .desafiosTextContent,
+  .desafiosTextContent .texto {
+    width: 100%;
+  }
+  .desafiosTextContent .titulo {
+    color: var(--cinza-escuro);
+    font-size: 40px;
+  }
+  .desafiosTextContent .texto {
+    color: var(--azul-cinza);
+  }
+}
