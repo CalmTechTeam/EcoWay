@@ -124,7 +124,8 @@
   height: 10px;
   background-color: #000;
 }
-.label-input:not(.anexo)::before {
+.label-input:has(#enderecoDenuncia)::before,
+.label-input:has(#enderecoAjuda)::before  {
   content: "";
   background-image: url(../assets/images/cidadao/imgLocation.png);
   background-size: contain;
