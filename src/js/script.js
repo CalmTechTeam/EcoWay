@@ -211,6 +211,8 @@ fecharAviso.addEventListener("click", () => {
 const formDenuncia = document.getElementById("formDenuncia");
 const formAjuda = document.getElementById("formAjuda");
 const btShowForm = document.querySelectorAll(".showForm");
+const btnDenuncia = document.querySelector("#enviarDenuncia");
+const btnAjuda = document.querySelector("#enviarAjuda");
 
 btShowForm.forEach(element => {
   element.addEventListener('click', () => {
@@ -218,6 +220,35 @@ btShowForm.forEach(element => {
   })
 });
 
+btnAjuda.addEventListener('click', (event) => {
+  const inputsAjuda = formAjuda.querySelectorAll('input[type="text"]')
+  let todosPreenchidos = true;
+
+  inputsAjuda.forEach((input) => {
+    if (input.value.trim() == "") {
+      todosPreenchidos = false;
+    }
+  });
+
+  if (todosPreenchidos) {
+    event.preventDefault();
+  }
+});
+
+btnDenuncia.addEventListener('click', (event) => {
+  const inputsDenuncia = formDenuncia.querySelectorAll('input[type="text"]')
+  let todosPreenchidos = true;
+
+  inputsDenuncia.forEach((input) => {
+    if (input.value.trim() == "") {
+      todosPreenchidos = false;
+    }
+  });
+
+  if (todosPreenchidos) {
+    event.preventDefault();
+  }
+});
 
 // Quiz ===============================================================================================
 const carrosselContainer = document.querySelector(".carrosselQuiz");
