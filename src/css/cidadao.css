@@ -198,8 +198,8 @@
   background-color: var(--preto);
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
-
 #formAjuda .label-input label > h2::before{
   background-color: var(--lilas);
 }
