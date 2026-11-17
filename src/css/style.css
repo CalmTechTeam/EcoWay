@@ -1,0 +1,17 @@
+@import './geral.css';
+@import './header.css';
+@import './intro.css';
+@import './apresentacao.css';
+@import './desafios.css';
+@import './tecnologias.css';
+@import './objetivos.css';
+@import './publico.css';
+@import './beneficios.css';
+@import './monitoramento.css';
+@import './quiz.css';
+@import './cidadao.css';
+@import './footer.css';
+
+html{
+  scroll-behavior: smooth;
+}

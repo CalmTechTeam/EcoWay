@@ -1,0 +1,118 @@
+/* seção de apresentação ============================================================= */
+main #apresentacao {
+  background-image: url(../assets/images/apresentacao/imgSection1.png);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  height: 600px;
+  position: relative;
+}
+
+main #tecnologias::before,
+main #tecnologias::after,
+main #apresentacao::before,
+main #apresentacao::after {
+  content: "";
+  background: url(../assets/images/apresentacao/imgDetalhe.png);
+  background-size: contain;
+  display: block;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+}
+main #tecnologias::before,
+main #apresentacao::before{
+  top: 45px;
+  transform: rotate(90deg);
+}
+
+main #apresentacao::before{
+  right: 0;
+}
+
+main #tecnologias::before {
+  right: 75px;
+}
+main #tecnologias::after {
+  left: 75px;
+  bottom: 45px;
+  z-index: -1;
+}
+
+main #apresentacao::after {
+  bottom: 0;
+  left: 0;
+}
+main #apresentacao .titulo {
+  margin-top: 60px;
+  width: 45%;
+}
+main .titulo {
+  font-family: "Cormorant Garamond", sans-serif;
+  font-weight: bold;
+  font-size: 55px;
+}
+main #apresentacao .texto {
+  width: 50%;
+}
+main .texto {
+  color: var(--azul-cinza);
+  font-size: 24px;
+}
+main #apresentacao .link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: fit-content;
+  border-radius: 10px;
+  background-color: var(--verde);
+  color: var(--verde-claro);
+  padding: 15px 30px;
+  cursor: pointer;
+  transition: .3s ease-in-out all;
+}
+main #apresentacao .link:hover {
+  scale: 1.1;
+}
+  
+main #apresentacao .link svg{
+  width: 20px;
+}
+
+@media (max-width: 768px) {
+  main #apresentacao {
+    height: auto;
+    min-height: 520px;
+    margin-top: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-size: 100%;
+    background-position: center top;
+  }
+main #tecnologias::before,
+main #apresentacao::before{
+  top: 0px;
+  right: 0;
+  transform: rotate(90deg);
+}
+  main #apresentacao .titulo,
+  main #apresentacao .texto {
+    width: 100%;
+  }
+  main #apresentacao .titulo{
+    margin-top: 70px;
+    width: 65%;
+  }
+  main .titulo {
+    font-size: 40px;
+  }
+  main .texto {
+    font-size: 18px;
+  }
+}

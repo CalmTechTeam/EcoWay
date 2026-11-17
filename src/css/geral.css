@@ -1,0 +1,87 @@
+/* Variáveis ========================================================================*/
+:root {
+  --azul-cinza: #555E5E;
+  --cinza-claro: #FAF9F6;
+  --cinza-escuro: #222525;
+  --cinza-label-box: #E4E4E4;
+  --cinza-label-text: #797979;
+  --verde: #304C17;
+  --verde-brilhante: #65B236;
+  --verde-claro: #CAD8C1;
+  --roxo: #9D2BA1;
+  --lilas: #7C1980;
+  --preto: #000D0C;
+  --fonte-titulos: "Cormorant Garamond";
+}
+
+/* Reset ===========================================================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Container ========================================================================*/
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* main ===============================================================================*/
+main {
+  background-color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.tituloSecundario {
+    font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    text-align: center;
+    gap: 10px;
+    justify-self: center;
+    position: relative;
+}
+
+.tituloSecundario::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    transform: translateX(50%);
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(#C75BCA, #7C1980);
+    border: 2px solid #222525;
+    border-radius: 50%;
+}
+
+.tituloSecundario::after {
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateX(50%);
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(#C75BCA, #7C1980);
+    border: 2px solid #222525;
+    border-radius: 50%;
+}
+
+/* Mobile =========================================================================== */
+@media (max-width: 768px) {
+  .container{
+    width: 100%;
+    padding-inline: 10px !important;
+  }
+
+}

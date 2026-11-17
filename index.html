@@ -2,11 +2,746 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    <meta name="description" content="EcoWay é uma plataforma voltada à sustentabilidade, ao meio ambiente e ao monitoramento do calor urbano, incentivando práticas sustentáveis e a participação cidadã.">
+    <meta name="keywords" content="EcoWay, meio ambiente, sustentabilidade, calor urbano, monitoramento ambiental, aquecimento global, ilhas de calor, áreas verdes, preservação ambiental, consciência ambiental, participação cidadã, cidades sustentáveis, tecnologia ambiental, qualidade de vida, mudanças climáticas, GS">
+    <title>EcoWay</title>
     <link rel="stylesheet" href="./src/css/style.css">
+    <link name="favicon" type="image/png" href="./src/assets/images/imgFaviconEco.png" rel="shortcut icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
+    <section id="intro" class="preventClicks" aria-label="Introdução do projeto">
+      <div class="introContainer bgBlack" id="introContainer">
+        <div class="cliqueAqui" id="cliqueAqui">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Pro 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc. --%3E%3Cpath fill='currentColor' d='M0 168c0-30.9 25.1-56 56-56l200.6 0c2-3.2 4.2-6.4 6.5-9.5L280 80c15.1-20.1 38.8-32 64-32l19.5 0c53 0 101.7 29.1 126.8 75.7l4.5 8.3c11.3 21 17.2 44.4 17.2 68.3L512 336c0 61.9-50.1 112-112 112l-96 0c-35.3 0-64-28.7-64-64 0-2.8 .2-5.6 .5-8.3-19.4-11-32.5-31.8-32.5-55.7 0-5.3 .7-10.5 1.9-15.5-20.2-10.8-33.9-32-33.9-56.5 0-8.5 1.7-16.6 4.7-24L56 224c-30.9 0-56-25.1-56-56zm56-24c-13.3 0-24 10.7-24 24s10.7 24 24 24l157.5 0c7.1 0 13.3 4.6 15.3 11.4s-.6 14-6.5 18c-8.7 5.8-14.3 15.6-14.3 26.7 0 15.6 11.2 28.6 25.9 31.4 5.1 1 9.5 4.4 11.6 9.2s1.8 10.3-.9 14.8c-2.9 4.8-4.6 10.5-4.6 16.6 0 14.7 10 27.2 23.6 30.9 4.4 1.2 8.1 4.2 10.1 8.3s2.2 8.8 .6 13.1c-1.4 3.6-2.2 7.6-2.2 11.8 0 17.7 14.3 32 32 32l96 0c44.2 0 80-35.8 80-80l0-135.7c0-18.5-4.6-36.8-13.4-53.1l0 0-4.5-8.3C442.6 102.6 404.7 80 363.5 80L344 80c-15.1 0-29.3 7.1-38.4 19.2l-9.6 12.8 48 0c8.8 0 16 7.2 16 16s-7.2 16-16 16L56 144z'/%3E%3C/svg%3E" alt="simbolo de mão apontando para clicar">
+        </div>
+
+        <div class="ladoEsquerdo">
+          <img class="planta" src="./src/assets/images/intro/imgPlanta-esquerda.png" alt="Planta Esquerda">
+          <img class="folha" id="folhaE1" src="./src/assets/images/intro/imgFolhaCaidaE1.png" alt="Folha Caida">
+          <img class="folha" id="folhaE2" src="./src/assets/images/intro/imgFolhaCaidaE2.png" alt="Folha Caida">
+        </div>
+  
+        <div class="ladoDireito">
+          <img class="planta" src="./src/assets/images/intro/imgPlanta-direita.png" alt="Planta Direita">
+          <img class="folha" id="folhaD" src="./src/assets/images/intro/imgFolhaCaidaD.png" alt="Folha Caida">
+        </div>
+      </div>
+    </section>
+
+    <header>
+      <section class="container">
+        <button id="showIntro">Mostrar intro</button>
+      </section>
+      <section id="headerContent" class="container" aria-label="Header">
+        <button class="menuMobile" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuPrincipal">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--%3E%3Cpath fill='rgb(0, 0, 0)' d='M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z'/%3E%3C/svg%3E" alt="simbolo menu hamburguer">
+        </button>
+        <img class="logoEcoWay" src="./src/assets/images/header/imgLogo.png" alt="Logo EcoWay">
+        <nav id="menuPrincipal" aria-label="Navegação principal">
+          <ul>
+            <li class="fechaMenu">
+              <button><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--%3E%3Cpath fill='rgb(0, 0, 0)' d='M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z'/%3E%3C/svg%3E"; alt="Fechar Menu"></button>
+            </li>
+            <li><a href="#apresentacao">Início</a></li>
+            <li><a href="#desafios">Desafios</a></li>
+            <li><a href="#tecnologias">Tecnologias</a></li>
+            <li><a href="#objetivos">Objetivos</a></li>
+            <li><a href="#publico">Público</a></li>
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#cidadao">Colabore</a></li>
+            <li><a href="#monitoramento">Monitoramento</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#footer">Contato</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <div class="menuOverlay" aria-hidden="true"></div>
+
+    <main>
+<!-- seção inicial ================================================================================================ -->
+      <section id="apresentacao" class="container" aria-label="Apresentação do projeto">
+        <h2 class="titulo">
+          Calor Intenso & Colapso no Ambiente
+        </h2>
+        <p class="texto">
+          O calor intenso e a falta de áreas verdes tornam os deslocamentos urbanos menos confortáveis e prejudicam a qualidade de vida.
+        </p>
+        <a class="link" href="#cidadao">
+          Ir para Campanha
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="#cad8c1" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+          </svg>
+        </a>
+      </section>
+
+<!-- seção desafios ================================================================================================= -->
+      <section id="desafios" aria-label="Desafios que serão resolvidos e enfrentados">
+        <article id="desafio1" class="desafio right">
+          <div class="desafiosContainer container right" >
+            <img src="./src/assets/images/desafios/imgDesafio1.png" alt="pessoas numa praça">
+            <div class="desafiosTextContent">
+              <h2 class="titulo">Uma Cidade Melhor Começa com a Sua Participação.</h3>
+              <p class="texto">Pequenas atitudes geram grandes mudanças. Participe de iniciativas que tornam nossa cidade mais verde, saudável e acolhedora.</p>
+              <a class="desafiosLink roxo" href="#cidadao">Participe</a>
+            </div>
+          </div>
+        </article>
+
+        <article id="desafio2" class="desafio left">
+          <div class="desafiosContainer container left" >
+            <div class="desafiosTextContent">
+              <h2 class="titulo">Descubra Onde o Calor se Esconde na Cidade!</h3>
+              <p class="texto">Identifique as regiões mais quentes e encontre áreas mais frescas para planejar seus deslocamentos com mais conforto.</p>
+              <a class="desafiosLink verde" href="#monitoramento">EXPLORAR MAPA</a>
+            </div>
+            <img src="./src/assets/images/desafios/imgDesafio2.png" alt="mapa de calor">
+          </div>
+        </article>
+
+        <article id="desafio3" class="desafio right">
+          <div class="desafiosContainer container right" >
+            <img src="./src/assets/images/desafios/imgDesafio3.png" alt="bebedouro">
+            <div class="desafiosTextContent">
+              <h2 class="titulo">Encontre Lugares para Respirar e se Refrescar!</h3>
+              <p class="texto">Nos dias de calor intenso, encontrar sombra e água faz toda a diferença. Descubra locais próximos para descansar e se hidratar.</p>
+              <a class="desafiosLink roxo" href="#cidadao">AJUDAR NA BUSCA</a>
+            </div>
+          </div>
+        </article>
+
+        <article id="desafio4" class="desafio left">
+          <div class="desafiosContainer container left" >
+            <div class="desafiosTextContent">
+              <h2 class="titulo">Problemas da Cidade</h3>
+              <p class="texto">Poucas Árvores, calor elevado e falta de informações e infraestrutura suficientes para proteger pessoas</p>
+            </div>
+            <img src="./src/assets/images/desafios/imgDesafio4.png" alt="rua num bosque">
+          </div>
+        </article>
+      </section>
+
+<!-- seção tecnologias =========================================================================================== -->
+      <section id="tecnologias" aria-label="Tecnologias utilizadas no projeto">
+        <h2>Tecnologias</h2>
+        <article class="tecnologiasContainer container">
+          <div id="tecnologiaHtml" class="tecnologia">
+            <h3>HTML</h3>
+            <p>O HTML será usado para estruturar e organizar o conteúdo e as seções do site EcoWay.</p>
+          </div>
+          <div id="tecnologiaCss" class="tecnologia">
+            <h3>CSS</h3>
+            <p>O CSS será utilizado para estilizar o site, definindo cores, fontes, espaçamentos, layouts e efeitos visuais.</p>
+          </div>
+          <div id="tecnologiaJs" class="tecnologia">
+            <h3>JavaScript</h3>
+            <p>O JavaScript será utilizado para adicionar interatividade e funcionalidades ao site.</p>
+          </div>
+        </article>
+        
+        <article class="tecnologiasContainer container">
+          <div id="tecnologiaFigma" class="tecnologia">
+            <h3>Figma</h3>
+            <p>O Figma será usado para criar o protótipo visual do site, desenvolvendo o layout, as telas e a experiência do usuário.</p>
+          </div>
+          <div id="tecnologiaC" class="tecnologia">
+            <h3>C++</h3>
+            <p>C++: Programará o Arduino e controlará os sensores.</p>
+          </div>
+        </article>
+      </section>
+
+<!-- seção de objetivos ========================================================================================= -->
+      <section id="objetivos" class="objetivos" aria-label="Seção dos objetivos do projeto">
+        <article class="container">
+
+          <h2 class="tituloSecundario">Objetivos</h2>
+          <ul class="objetivosLista">
+            <li>
+              <img src="./src/assets/images/objetivos/imgCalor.svg" alt="Exposição ao Calor">
+              <h3>Reduzir a exposição ao calor</h3>
+              <p>Identificar regiões quentes e ajudar a evitar o calor excessivo.</p>
+            </li>
+            <li>
+              <img src="./src/assets/images/objetivos/imgMobilidade.svg" alt="Mobilidade">
+              <h3>Promover mobilidade confortável</h3>
+              <p>Oferecer rotas com mais árvores e sombras.</p>
+            </li>
+            <li>
+              <img src="./src/assets/images/objetivos/imgArvores.svg" alt="Arborização">
+              <h3>Incentivar a arborização urbana</h3>
+              <p>Estimular a preservação e a ampliação das áreas verdes.</p>
+            </li>
+            <li>
+              <img src="./src/assets/images/objetivos/imgGrupo.svg" alt="Comunidade">
+              <h3>Estimular a participação cidadã</h3>
+              <p>Permitir que moradores registrem problemas e sugiram melhorias.</p>
+            </li>
+            <li>
+              <img src="./src/assets/images/objetivos/imgAgua.svg" alt="Hidratação">
+              <h3>Facilitar o acesso à hidratação</h3>
+              <p>Localizar bebedouros, parques e pontos de descanso.</p>
+            </li>
+            <li>
+              <img src="./src/assets/images/objetivos/imgPets.svg" alt="Pets">
+              <h3>Promover o bem-estar animal</h3>
+              <p>Indicar trajetos mais seguros e confortáveis para os pets.</p>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+<!-- seção do público ========================================================================================== -->
+      <section id="publico" class="publico" aria-label="Público alvo do projeto">
+        <h2 class="tituloSecundario">Público</h2>
+        <div class="carrossel">
+          <div class="slides">
+
+            <div class="slide">
+              <ul class="listaImgsPublico">
+                <li><img src="./src/assets/images/publico/imgEstudantes.jpg" alt="Estudantes"></li>
+                <li><img src="./src/assets/images/publico/imgTrabalhadores.jpg" alt="Trabalhadores"></li>
+                <li><img src="./src/assets/images/publico/imgIdosos.jpg" alt="Idosos"></li>
+                <li><img src="./src/assets/images/publico/imgTutor.jpg" alt="Tutores"></li>
+              </ul>
+              <div class="conteudo">
+                <div class="conteudoImg"><img src="./src/assets/images/publico/ImgConteudoPublico.png" alt="Conteúdo BackGround"></div>
+                <div class="conteudoInfo">
+                  <h4>Tutores de Animais</h4>
+                  <p>O calor excessivo também representa riscos para os animais, principalmente durante passeios em locais com asfalto muito quente e pouca sombra.</p>
+                  <ul>
+                    <li>Rotas com sombras</li>
+                    <li>Pontos de Hidratação</li>
+                    <li>Parques</li>
+                    <li>Passeio</li>
+                  </ul>
+                  <div class="botaoNav">
+                    <img src="./src/assets/images/publico/imgVoltar.svg" alt="Voltar">
+                    <img src="./src/assets/images/publico/imgAvancar.svg" alt="Avançar">
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="slide">
+              <ul class="listaImgsPublico">
+                <li><img src="./src/assets/images/publico/imgTutor.jpg" alt="Tutores"></li>
+                <li><img src="./src/assets/images/publico/imgEstudantes.jpg" alt="Estudantes"></li>
+                <li><img src="./src/assets/images/publico/imgTrabalhadores.jpg" alt="Trabalhadores"></li>
+                <li><img src="./src/assets/images/publico/imgIdosos.jpg" alt="Idosos"></li>
+              </ul>
+              <div class="conteudo">
+                <img src="./src/assets/images/publico/ImgConteudoPublico.png" alt="Conteúdo BackGround">
+                <div class="conteudoInfo">
+                  <h4>Pedreste: Idosos</h4>
+                  <p>As altas temperaturas podem tornar os deslocamentos ainda mais difíceis para pessoas idosas.</p>
+                  <ul>
+                    <li>Localizar áreas sombreadas</li>
+                    <li>Pontos de Descanso</li>
+                    <li>Pontos de Hidratação</li>
+                    <li>Trajetos mais Confortáveis </li>
+                  </ul>
+                  <div class="botaoNav">
+                    <img src="./src/assets/images/publico/imgVoltar.svg" alt="Voltar">
+                    <img src="./src/assets/images/publico/imgAvancar.svg" alt="Avançar">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <ul class="listaImgsPublico">
+                <li><img src="./src/assets/images/publico/imgIdosos.jpg" alt="Idosos"></li>
+                <li><img src="./src/assets/images/publico/imgTutor.jpg" alt="Tutores"></li>
+                <li><img src="./src/assets/images/publico/imgEstudantes.jpg" alt="Estudantes"></li>
+                <li><img src="./src/assets/images/publico/imgTrabalhadores.jpg" alt="Trabalhadores"></li>
+              </ul>
+              <div class="conteudo">
+                <img src="./src/assets/images/publico/ImgConteudoPublico.png" alt="Conteúdo BackGround">
+                <div class="conteudoInfo">
+                  <h4>Pedreste: Trabalhadores</h4>
+                  <p>Para quem precisa sair de casa todos os dias, o calor intenso pode tornar os deslocamentos cansativos e desconfortáveis.</p>
+                  <ul>
+                    <li>Menor Exposição ao Sol</li>
+                    <li>Ajudar nos Deslocamentos Diários</li>
+                    <li>Chegar menos cansado no trabalho</li>
+                  </ul>
+                  <div class="botaoNav">
+                    <img src="./src/assets/images/publico/imgVoltar.svg" alt="Voltar">
+                    <img src="./src/assets/images/publico/imgAvancar.svg" alt="Avançar">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <ul class="listaImgsPublico">
+                <li><img src="./src/assets/images/publico/imgTrabalhadores.jpg" alt="Trabalhadores"></li>
+                <li><img src="./src/assets/images/publico/imgIdosos.jpg" alt="Idosos"></li>
+                <li><img src="./src/assets/images/publico/imgTutor.jpg" alt="Tutores"></li>
+                <li><img src="./src/assets/images/publico/imgEstudantes.jpg" alt="Estudantes"></li>
+              </ul>
+              <div class="conteudo">
+                <img src="./src/assets/images/publico/ImgConteudoPublico.png" alt="Conteúdo BackGround">
+                <div class="conteudoInfo">
+                  <h4>Pedreste: Estudantes</h4>
+                  <p>O EcoWay ajuda estudantes que caminham diariamente até escolas, faculdades e pontos de transporte público</p>
+                  <ul>
+                    <li>Rotas Mais Frescas</li>
+                    <li>Ajudar no Preparo</li>
+                    <li>Mais Árvores e Sombras,</li>
+                  </ul>
+                  <div class="botaoNav">
+                    <img src="./src/assets/images/publico/imgVoltar.svg" alt="Voltar">
+                    <img src="./src/assets/images/publico/imgAvancar.svg" alt="Avançar">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!-- seção dos benefícios ================================================================================== -->
+      <section id="beneficios" class="beneficios" aria-label="Benefícios do projeto">
+        <article class="container">
+          <h2 class="tituloSecundario">Benefícios</h2>
+          <div class="beneficiosContainer">
+            <div class="cidadao">
+              <h4>cidadão</h4>
+              <div class="beneficioItem">
+                <div>
+                  <p>Rotas Mais Frescas</p>
+                </div>
+              </div>
+              <div class="beneficioItem">
+                <div>
+                  <p>Identificação do calor</p>
+                </div>
+              </div>
+              <div class="beneficioItem">
+                <div>
+                  <p>Pontos de hidratação</p>
+                </div>
+              </div>
+              <div class="beneficioItem">
+                <div>
+                  <p>Participação da Comunidade</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="cidade">
+              <h4>cidade</h4>
+              <div class="beneficioItem">
+                <div>
+                  <p>Sustentabilidade</p>
+                </div>
+              </div>
+              <div class="beneficioItem">
+                <div>
+                  <p>Mais Arborização</p>
+                </div>
+              </div>
+              <div class="beneficioItem">
+                <div>
+                  <p>Participação da População</p>
+                </div>
+              </div>
+              <div class="beneficioItem">
+                <div>
+                  <p>Monitorar Infraestrutura</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="pet">
+              <h4>pet</h4>
+              <div class="beneficioItem">
+                <div>
+                  <p>Áreas Sombreadas</p>
+                </div>
+              </div>
+              <div class="beneficioItem">
+                <div>
+                  <p>Hidratação</p>
+                </div>
+              </div>
+              <div class="beneficioItem">
+                <div>
+                  <p>Proteção das Patas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+<!-- seção cidadão ----------------------------------------------------------------------------------- -->
+       <section id="cidadao">
+        <section class="cidadaoHeaderContainer">
+          <article id="cidadaoHeaderContent" class="container">
+            <h2>Faça parte da Mudança</h2>
+            <p>Pequenas atitudes geram grandes transformações. Participe da nossa campanha, contribua com ações sustentáveis e ajude a construir cidades mais verdes e um futuro melhor para todos</p>
+            <div class="linksContainer">
+              <a class="linkMapa" href="#monitoramento">Ver mapa</a>
+            </div>
+          </article>
+        </section>
+
+        <section class="cidadaoContent container">
+          <h2>Como Posso Ajudar?</h2>
+          <article class="blocosContainer">
+            <div class="blocoAjuda">
+              <h3>Denunciar problema</h3>
+              <p>Envie fotos do seu local sem sombra, sem árvores ou outros problemas</p>
+              <buttom id="showFormDenuncia" class="showForm">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="#cad8c1" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                </svg>
+              </buttom>
+            </div>
+            <div class="blocoAjuda">
+              <h3>Sugerir Melhoria</h3>
+              <p>Proponha ideias como bebedouros e coberturas em pontos de ônibus</p>
+              <buttom id="showFormAjuda" class="showForm">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="#cad8c1" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                </svg>
+              </buttom>
+            </div>
+          </article>
+        </section>
+
+        <section id="formDenuncia" class="container">
+          <form action="" method="post">
+
+            <div class="label-input">
+              <label for="acontecimentoDenuncia">
+                <h2>O que aconteceu?</h2>  
+              </label>
+              <input required id="acontecimentoDenuncia" class="inputForm" name="acontecimentoDenuncia" type="text" placeholder="Descreva o Problema">
+            </div>
+
+            <div class="label-input">
+              <label for="enderecoDenuncia">
+                <h2>Informe o Endereço</h2>  
+              </label>
+              <input required id="enderecoDenuncia" class="inputForm" name="enderecoDenuncia" type="text" placeholder="Descreva o Problema">
+            </div>
+
+            <div class="label-input anexo">
+              <label for="anexoDenuncia">
+                <h2>Anexar uma Foto (opcional)</h2>
+              </label>
+              
+              <div class="anexo-submit">
+                <div class="anexoContainer">
+                  <input class="anexoInput" id="anexoDenuncia" name="anexoDenuncia" type="file" multiple>
+                </div>
+                <button id="enviarDenuncia" class="botaoSubmit" type="submit">Enviar Denúncia</button>
+              </div>
+
+            </div>
+          </form>
+        </section>
+
+        <section id="formAjuda" class="container">
+          <form action="" method="post">
+
+            <div class="label-input">
+              <label for="acontecimentoAjuda">
+                <h2>O que aconteceu?</h2>  
+              </label>
+              <input required id="acontecimentoAjuda" class="inputForm" name="acontecimentoAjuda" type="text" placeholder="Descreva o Problema">
+            </div>
+
+            <div class="label-input">
+              <label for="enderecoAjuda">
+                <h2>Informe o Endereço</h2>  
+              </label>
+              <input required id="enderecoAjuda" class="inputForm" name="enderecoAjuda" type="text" placeholder="Descreva o Problema">
+            </div>
+
+            <div class="label-input anexo">
+              <label for="anexoAjuda">
+                <h2>Anexar uma Foto (opcional)</h2>
+              </label>
+              
+              <div class="anexo-submit">
+                <div class="anexoContainer">
+                  <input class="anexoInput" id="anexoAjuda" name="anexoAjuda" type="file" multiple>
+                </div>
+                <button id="enviarAjuda" class="botaoSubmit" type="submit">Enviar Sugestão</button>
+              </div>
+
+            </div>
+          </form>
+        </section>
+       </section>
+
+<!-- seção do monitoramento ========================================================================================= -->
+      <section id="monitoramento" class="monitoramento" aria-label="Monitoramento da temperatura e rotas">
+        <article class="container">
+          <h2 class="tituloSecundario">Mapa</h2>
+          <aside class="aviso" id="aviso">
+            <div class="fecharAviso">X</div>
+            <div id="conteudoAviso">
+              <p>Esta página, os mapas e o sensor ambiental possuem caráter demonstrativo, apresentando 
+                uma simulação de como a plataforma EcoWay funcionaria na prática. Quer conhecer melhor? 
+                Acesse nossa <span><a target="_blank" href="https://wokwi.com/projects/480306692485186561">simulação no Wokwi</a></span> 
+                e veja como funciona o monitoramento ambiental desenvolvido em C++
+              </p>
+            </div>
+          </aside>
+          <form action="" class="formMapa">
+            <div class="formItem">
+              <label for="partida">Ponto de Partida</label>
+              <input type="text" name="partida" id="partida" disabled placeholder="Localização Atual">
+            </div>
+            <div class="formItem">
+              <label for="destino">Destino</label>
+              <select name="destino" id="destino" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="parqueIbira">Parque Ibirapuera</option>
+                <option value="itaimBibi">Itaim Bibi</option>
+                <option value="krispyKreme">Krispy Kreme</option>
+                <option value="cafeCultura">Café Cultura</option>
+            </select>
+            </div>
+            <button id="btnMapa" type="submit">ESCOLHER</button>
+          </form>
+          <div class="monitoramentoMapa">
+            <ul class="listaLegenda">
+              <li>Mais Fresco</li>
+              <li>Moderado</li>
+              <li>Mais Quente</li>
+              <li>Caminho Fresco</li>
+              <li>Caminho Quente</li>
+            </ul>
+            <div class="mapaImg">
+              <img src="./src/assets/images/monitoramento/imgCafe.jpg" alt="Café Cultura">
+              <img src="./src/assets/images/monitoramento/imgItaim.jpg" alt="Itaim Bibi">
+              <img src="./src/assets/images/monitoramento/imgKrispy.jpg" alt="Krispy Kreme">
+              <img src="./src/assets/images/monitoramento/imgParque.jpg" alt="Parque Ibirapuera">
+            </div>
+            <div class="monitoramentoAmbiente">
+              <div class="temperatura">
+                <h3>Temperatura Local Atual</h3>
+                <div class="temperaturaInfo">
+                  <div class="temperaturaMedida"><h4>29°C</h4></div>
+                  <p>Status: <span>ERRO</span></p>
+                </div>
+              </div>
+              <div class="umidade">
+                <h3>Umidade Local Atual</h3>
+                <div class="umidadeInfo">
+                  <div class="umidadeMedida"><h4>18%</h4></div>
+                  <p>Status: <span>ERRO</span></p>
+                </div>
+              </div>
+              <div class="ambienteLuz">
+                <h3>Ambiente <span>Muito Claro</span></h3>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+<!-- seção do quiz ====================================================================================== -->
+      <section id="quiz" class="quiz " aria-label="Quiz para saber seus hábitos sustentáveis">
+        <div class="introQuiz">
+          <img class="folhasQuiz" src="./src/assets/images/quiz/imgFolhas.png" alt="Folhas soltas e separadas">
+          <div class="container">
+            <div class="conteudoImpacto">
+                <div class="textoImpacto">
+                    <h2>Descubra seu Impacto Ambiental</h2>
+                    <p>
+                        Responda ao quiz e descubra como seus hábitos diários
+                        impactam o meio ambiente. Ao final, confira seu resultado.
+                    </p>
+                </div>
+                <a href="#quizCarrossel" class="botaoImpacto">IR PARA QUIZ</a>
+            </div>
+          </div>
+        </div>
+
+        <article class="container">
+          <div class="quizContainer" id="quizCarrossel">
+            <ul class="navQuiz">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <div class="carrosselQuiz">
+              <div class="pergunta">
+                <h4>1- Como você contribui para reduzir o calor nas cidades?</h4>
+                <div class="opcoesPerguntas">
+                  <div class="opcaoQuiz">
+                    <input type="radio" name="pergunta1" id="plantar" value="10">
+                    <label for="plantar">Planto árvores e valorizo áreas verdes</label>
+                  </div>
+                  <div class="opcaoQuiz">
+                    <input type="radio" name="pergunta1" id="sem_costume" value="2">
+                    <label for="sem_costume">Não costumo ter atitudes relacionadas a isso</label>
+                  </div>
+                  <div class="opcaoQuiz">
+                    <input type="radio" name="pergunta1" id="evitar_retirar" value="7">
+                    <label for="evitar_retirar">Evito retirar plantas e árvores</label>
+                  </div>
+                </div>
+              </div>
+              <div class="pergunta">
+                <h4>2- Como você contribui para reduzir o calor nas cidades?</h4>
+                <div class="opcoesPerguntas">
+                  <div class="opcaoQuiz">
+                    <input type="radio" name="pergunta2" id="separar" value="10">
+                    <label for="separar">Separo os resíduos para reciclagem</label>
+                  </div>
+                  <div class="opcaoQuiz">
+                    <input type="radio" name="pergunta2" id="descarte_sem_separar" value="7">
+                    <label for="descarte_sem_separar">Descarto o lixo em lixeiras, sem separar</label>
+                  </div>
+                  <div class="opcaoQuiz">
+                    <input type="radio" name="pergunta2" id="inadequado_lixo" value="2">
+                    <label for="inadequado_lixo">Às vezes descarto resíduos em locais inadequados</label>
+                  </div>
+                </div>
+              </div>
+              <div class="pergunta">
+                <h4>3- Como você lida com o desperdício de água?</h4>
+                <div class="opcoesPerguntas">
+                  <div class="opcaoQuiz">
+                    <input type="radio" name="pergunta3" id="economizar" value="10">
+                    <label for="economizar">Economizo água e reutilizo quando possível</label>
+                  </div>
+                  <div class="opcaoQuiz">
+                    <input type="radio" name="pergunta3" id="tentar_economizar" value="7">
+                    <label for="tentar_economizar">Tento economizar, mas às vezes desperdiço</label>
+                  </div>
+                  <div class="opcaoQuiz">
+                    <input type="radio" name="pergunta3" id="sem_habito_consumo" value="2">
+                    <label for="sem_habito_consumo">Não tenho o hábito de controlar o consumo</label>
+                  </div>
+                </div>
+              </div>
+              <div class="pergunta">
+                <h4>4- Como você contribui para reduzir a poluição e o aquecimento urbano?</h4>
+                <div class="opcoesPerguntas">
+                  <div class="opcaoQuiz">
+                    <input type="radio" name="pergunta4" id="transporte_bom" value="10">
+                    <label for="transporte_bom">Utilizo bicicleta, caminhada ou transporte público</label>
+                  </div>
+                  <div class="opcaoQuiz">
+                    <input type="radio" name="pergunta4" id="transporte_bom_moderado" value="7">
+                    <label for="transporte_bom_moderado">Utilizo carro ou moto na maioria dos deslocamentos</label>
+                  </div>
+                  <div class="opcaoQuiz">
+                    <input type="radio" name="pergunta4" id="outros_contribuicoes" value="5">
+                    <label for="outros_contribuicoes">Tenho outras formas de contribuir</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="quizBotoes">
+              <button type="button" id="btnAnteriorQuiz">ANTERIOR</button>
+              <button type="button" id="btnProximoQuiz">PRÓXIMO</button>
+            </div>
+          </div>
+          <div class="resultados">
+            <h3>Resultados</h3>
+            <div class="valoresResultadosContainer">
+              <div class="resultadoGeral">
+                <h4>Geral</h4>
+                <div class="progressoCircular">
+                    <div class="progressoTexto"></div>
+                </div>
+              </div>
+              <div class="resultadoEspecifico">
+                <h4>Seu desempenho por categoria</h4>
+                <div class="especificoItem">
+                  <div class="progressoInfo">
+                    <span>Arborização e calor</span>
+                    <span class="valorProgresso"></span>
+                  </div>
+                  <div class="barraProgresso">
+                    <div class="preenchimento"></div>
+                  </div>
+                </div>
+                <div class="especificoItem">
+                  <div class="progressoInfo">
+                    <span>Descarte de resíduos</span>
+                    <span class="valorProgresso"></span>
+                  </div>
+                  <div class="barraProgresso">
+                    <div class="preenchimento"></div>
+                  </div>
+                </div>
+                <div class="especificoItem">
+                  <div class="progressoInfo">
+                    <span>Consumo de água</span>
+                    <span class="valorProgresso"></span>
+                  </div>
+                  <div class="barraProgresso">
+                    <div class="preenchimento"></div>
+                  </div>
+                </div>
+                <div class="especificoItem">
+                  <div class="progressoInfo">
+                    <span>Mobilidade sustentável</span>
+                    <span class="valorProgresso"></span>
+                  </div>
+                  <div class="barraProgresso">
+                    <div class="preenchimento"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+<!-- footer ----------------------------------------------------------------------------------- -->
+    <footer class="footer" id="footer">
+      <article class="container">
+
+        <div class="logoFooter">
+          <a href="./index.html"><img src="./src/assets/images/footer/imgLogo.svg" alt="Logo"></a>
+          <p>Cidade mais fresca para todos</p>
+        </div>
+        <div class="sobreFooter">
+          <h5>Sobre</h5>
+          <ul>
+            <li><a href="#apresentacao">Início</a></li>
+            <li><a href="#desafios">Desafios</a></li>
+            <li><a href="#tecnologias">Tecnologias</a></li>
+            <li><a href="#objetivos">Objetivos</a></li>
+            <li><a href="#publico">Público</a></li>
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#cidadao">Colabore</a></li>
+            <li><a href="#monitoramento">Monitoramento</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+          </ul>
+        </div>
+        <div class="contatoFooter">
+          <h5>Contato</h5>
+          <ul>
+            <li><a href="./index.html"><img src="./src/assets/images/footer/imgInstagram.svg" alt="Instagram"></a></li>
+            <li><a target="_blank" href="https://github.com/CalmTechTeam/EcoWay"><img src="./src/assets/images/footer/imgGitHub.svg" alt="GitHub"></a></li>
+          </ul>
+        </div>
+        <div class="footerFigma">
+          <h5>Figma</h5>
+          <span>Confira <a target="_blank" href="https://www.figma.com/design/eb8IvAwl54ELKeyeElbxIX/EcoWay?node-id=0-1&p=f&t=tHQ3ZLoDjFLrgUxk-0">nosso projeto</a> feito pelo Figma</span>
+        </div>
+      </article>
+    </footer>
 
     <script src="./src/js/script.js"></script>
   </body>
