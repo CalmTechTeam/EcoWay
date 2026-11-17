@@ -1,10 +1,8 @@
 .introQuiz {
     background: #000D0C;
-    background-image: url(../assets/images/quiz/imgFolhas.png);
     width: 100%;
     min-height: 350px;
     padding: 45px 0 45px 55px;
-    overflow: hidden;
     position: relative;
     width: 100%;
     min-height: 450px;
@@ -20,82 +18,6 @@
     transform: translateX(-50%);
     z-index: 1;
     pointer-events: none;
-}
-
-@media(max-width:893px) {
-  .folhasQuiz {
-        width: 700px;
-    }  
-}
-
-@media(max-width:712px) {
-  .folhasQuiz {
-        width: 650px;
-    } 
-    .textoImpacto h2 {
-        font-size: 45px;
-        max-width: 70vw !important;
-    }
-
-    .textoImpacto p {
-        font-size: 15px;
-        max-width: 60vw !important;
-    }
-}
-@media(max-width:590px) {
-  .folhasQuiz {
-        width: 550px;
-    } 
-}
-
-@media(max-width:453px) {
-  .folhasQuiz {
-        width: 400px;
-    } 
-    .textoImpacto h2 {
-        font-size: 35px !important;
-        max-width: 80vw !important;
-    }
-
-    .textoImpacto p {
-        font-size: 14px !important;
-        max-width: 70vw !important;
-    }
-    .botaoImpacto {
-        font-size: 20px !important;
-    }
-}
-
-@media (max-width: 768px) {
-  .introQuiz {
-    min-height: auto;
-    padding: 70px 10px 35px;
-  }
-  .conteudoImpacto {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 25px;
-  }
-  .textoImpacto h2,
-  .textoImpacto p {
-    max-width: 100% !important;
-  }
-  .botaoImpacto {
-    align-self: stretch;
-    text-align: center;
-    border-radius: 10px;
-  }
-  .navQuiz {
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-  .opcoesPerguntas {
-    margin: 0;
-  }
-  .resultados,
-  .valoresResultadosContainer {
-    padding: 30px 10px;
-  }
 }
 
 .conteudoImpacto {
@@ -359,4 +281,86 @@
     background: linear-gradient(90deg, #65B236, #2B4C17);
     border-radius: 20px;
     transition: all 0.5s ease;
+}
+
+@media(max-width:893px) {
+  .folhasQuiz {
+        width: 700px;
+    }
+    .botaoImpacto {
+        border-radius: 10px;
+    }
+    .botaoImpacto:hover {
+        scale: 1.03;
+    }
+}
+
+@media(max-width:712px) {
+  .folhasQuiz {
+        width: 650px;
+    } 
+    .textoImpacto h2 {
+        font-size: 45px;
+        max-width: 70vw !important;
+    }
+
+    .textoImpacto p {
+        font-size: 15px;
+        max-width: 60vw !important;
+    }
+}
+@media(max-width:590px) {
+  .folhasQuiz {
+        width: 550px;
+    } 
+}
+
+@media(max-width:453px) {
+  .folhasQuiz {
+        width: 400px;
+    } 
+    .textoImpacto h2 {
+        font-size: 35px !important;
+        max-width: 80vw !important;
+    }
+
+    .textoImpacto p {
+        font-size: 14px !important;
+        max-width: 70vw !important;
+    }
+    .botaoImpacto {
+        font-size: 20px !important;
+    }
+}
+
+@media (max-width: 768px) {
+  .introQuiz {
+    min-height: auto;
+    padding: 70px 10px 35px;
+  }
+  .conteudoImpacto {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+  .textoImpacto h2,
+  .textoImpacto p {
+    max-width: 100% !important;
+  }
+  .botaoImpacto {
+    align-self: stretch;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .navQuiz {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .opcoesPerguntas {
+    margin: 0;
+  }
+  .resultados,
+  .valoresResultadosContainer {
+    padding: 30px 10px;
+  }
 }

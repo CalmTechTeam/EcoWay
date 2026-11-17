@@ -40,5 +40,6 @@
 @media (max-width: 768px) {
   .objetivos{
     padding: 0;
+    margin: 15px 0;
   }
 }
