@@ -3,7 +3,10 @@ const intro = document.getElementById('intro');
 
 // teste intro, se for primeiro acesso, mostra intro, do contrario, não
 if (localStorage.getItem("intro")) {
-  intro.style.display = "none"
+  intro.style.display = "none";
+  setTimeout(() => {
+    document.body.style.overflow = 'auto';
+  }, 100);
 }
 
 // mostra intro novamente
