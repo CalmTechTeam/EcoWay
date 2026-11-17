@@ -5,7 +5,7 @@
   overflow: hidden;
   position: absolute;
   top:0;
-  z-index: 9;
+  z-index: 999;
 }
 
 #intro.preventClicks {
@@ -17,6 +17,50 @@
   justify-content: center;
   overflow: hidden;
   gap: 116px;
+}
+
+#intro .cliqueAqui {
+  transform: translate(-25%, -60%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  z-index: 9;
+}
+#intro .cliqueAqui img{
+  width: 50px;
+  height: 50px;
+  filter: invert(1);
+  transform: rotate(90deg);
+  animation: aumenta alternate infinite 1s;
+}
+
+@keyframes aumenta {
+  0%{scale: 1;}
+  20%{scale: 1;}
+  100%{scale: 1.2;}
+}
+#intro .cliqueAqui::after{
+  content: "";
+  width: 90px;
+  height: 90px;
+  border: 2px solid #fff;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 70%;
+  z-index: 10;
+  transform-origin: center;
+  animation: clickPulsar 2s forwards infinite;
+}
+@keyframes clickPulsar {
+  0%{
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  100%{
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
 }
 
 #intro .ladoEsquerdo,

@@ -14,6 +14,7 @@ document.getElementById("showIntro").addEventListener("click", () => {
 
 
 const introContainer = document.getElementById('introContainer');
+const cursorClick = document.getElementById('cliqueAqui');
 const plantaEsquerda = document.querySelector('.ladoEsquerdo');
 const plantaDireita = document.querySelector('.ladoDireito');
 const folhaE1 = document.getElementById('folhaE1');
@@ -23,6 +24,35 @@ const folhaD = document.getElementById('folhaD');
 function isMobile() {
   return window.matchMedia('(max-width: 768px)').matches;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.body.style.overflow = 'hidden';
+  cursorClick.style.display = 'none';
+
+  setTimeout(() => {
+    intro.classList.remove('preventClicks');
+    cursorClick.style.display = 'block';
+  }, 2000);
+});
+
+intro.addEventListener('click', () => {
+  cursorClick.style.display = 'none';
+  plantaEsquerda.classList.add('fade-out-left');
+  plantaDireita.classList.add('fade-out-right');
+  folhaE1.classList.add('fadeIn');
+  folhaE2.classList.add('fadeIn');
+  folhaD.classList.add('fadeIn');
+
+  introContainer.classList.remove('bgBlack');
+  setTimeout(() => {
+    intro.style.display = "none";
+    document.body.style.overflow = 'auto';
+  }, 3000);
+});
+
+
+localStorage.setItem("intro", true);
+
 
 // menu mobile ================================================================
 const botaoMenu = document.querySelector('.menuMobile');
@@ -67,27 +97,6 @@ window.addEventListener('resize', () => {
     botaoMenu?.setAttribute('aria-expanded', 'false');
   }
 });
-
-document.addEventListener('DOMContentLoaded', () => {
-  setTimeout(() => {
-    intro.classList.remove('preventClicks');
-  }, 2000);
-});
-
-intro.addEventListener('click', () => {
-  plantaEsquerda.classList.add('fade-out-left');
-  plantaDireita.classList.add('fade-out-right');
-  folhaE1.classList.add('fadeIn');
-  folhaE2.classList.add('fadeIn');
-  folhaD.classList.add('fadeIn');
-
-  introContainer.classList.remove('bgBlack');
-  intro.style.display = "none"
-});
-
-
-localStorage.setItem("intro", true);
-
 
 // animação scroll lateral desafios ============================================
 const elemento = document.querySelector('#desafios');
