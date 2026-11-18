@@ -1,21 +1,5 @@
 // intro animada ==============================================================
 const intro = document.getElementById('intro');
-
-// teste intro, se for primeiro acesso, mostra intro, do contrario, não
-if (localStorage.getItem("intro")) {
-  intro.style.display = "none";
-  setTimeout(() => {
-    document.body.style.overflow = 'auto';
-  }, 100);
-}
-
-// mostra intro novamente
-document.getElementById("showIntro").addEventListener("click", () => {
-  localStorage.removeItem("intro");
-  location.reload();
-})
-
-
 const introContainer = document.getElementById('introContainer');
 const cursorClick = document.getElementById('cliqueAqui');
 const plantaEsquerda = document.querySelector('.ladoEsquerdo');
@@ -29,14 +13,30 @@ function isMobile() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.body.style.overflow = 'hidden';
-  cursorClick.style.display = 'none';
-
-  setTimeout(() => {
-    intro.classList.remove('preventClicks');
-    cursorClick.style.display = 'block';
-  }, 2000);
+  console.log(localStorage.getItem("intro"))
+  localStorage.getItem("intro") ? showIntro(true) : showIntro(false);
 });
+
+function showIntro(mostrarIntro) {
+  if (mostrarIntro == false) {
+    document.body.style.overflow = 'hidden';
+    cursorClick.style.display = 'none';
+
+    setTimeout(() => {
+      intro.classList.remove('preventClicks');
+      cursorClick.style.display = 'block';
+    }, 2000);
+  }
+  else {
+    intro.style.display = "none"
+  }
+}
+
+// mostra intro novamente
+document.getElementById("showIntro").addEventListener("click", () => {
+  localStorage.removeItem("intro");
+  location.reload();
+})
 
 intro.addEventListener('click', () => {
   cursorClick.style.display = 'none';
@@ -45,17 +45,15 @@ intro.addEventListener('click', () => {
   folhaE1.classList.add('fadeIn');
   folhaE2.classList.add('fadeIn');
   folhaD.classList.add('fadeIn');
+  intro.classList.add('hidden');
 
   introContainer.classList.remove('bgBlack');
   setTimeout(() => {
     intro.style.display = "none";
     document.body.style.overflow = 'auto';
   }, 3000);
+  localStorage.setItem("intro", true);
 });
-
-
-localStorage.setItem("intro", true);
-
 
 // menu mobile ================================================================
 const botaoMenu = document.querySelector('.menuMobile');
