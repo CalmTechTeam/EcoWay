@@ -3,10 +3,7 @@ const intro = document.getElementById('intro');
 
 // teste intro, se for primeiro acesso, mostra intro, do contrario, não
 if (localStorage.getItem("intro")) {
-  intro.style.display = "none";
-  setTimeout(() => {
-    document.body.style.overflow = 'auto';
-  }, 100);
+  intro.style.display = "none"
 }
 
 // mostra intro novamente
@@ -14,7 +11,6 @@ document.getElementById("showIntro").addEventListener("click", () => {
   localStorage.removeItem("intro");
   location.reload();
 })
-
 
 const introContainer = document.getElementById('introContainer');
 const cursorClick = document.getElementById('cliqueAqui');
@@ -45,6 +41,7 @@ intro.addEventListener('click', () => {
   folhaE1.classList.add('fadeIn');
   folhaE2.classList.add('fadeIn');
   folhaD.classList.add('fadeIn');
+  intro.classList.add('hidden');
 
   introContainer.classList.remove('bgBlack');
   setTimeout(() => {
