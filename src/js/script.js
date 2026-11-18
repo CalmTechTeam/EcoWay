@@ -13,7 +13,6 @@ function isMobile() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log(localStorage.getItem("intro"))
   localStorage.getItem("intro") ? showIntro(true) : showIntro(false);
 });
 
